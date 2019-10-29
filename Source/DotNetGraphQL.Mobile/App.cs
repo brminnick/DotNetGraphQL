@@ -11,7 +11,7 @@ namespace DotNetGraphQL.Mobile
                 HttpHeadersTimeout = 60
             });
 
-            MainPage = new ImageListPage();
+            MainPage = new BaseNavigationPage(new DogImageListPage());
         }
     }
 }

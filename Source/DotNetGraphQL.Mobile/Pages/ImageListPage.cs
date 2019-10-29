@@ -5,23 +5,40 @@ using Xamarin.Forms;
 
 namespace DotNetGraphQL.Mobile
 {
-    class ImageListPage : BaseContentPage<ImageListViewModel>
+    class DogImageListPage : BaseContentPage<DogImageListViewModel>
     {
         readonly RefreshView _refreshView;
 
-        public ImageListPage()
+        public DogImageListPage()
         {
+            ViewModel.PullToRefreshFailed += HandlePullToRefreshFailed;
+
             var collectionView = new CollectionView
             {
-                ItemTemplate = new DogImageListDataTemplate(),
+                ItemTemplate = new DogImageListDataTemplateSelector(),
                 SelectionMode = SelectionMode.Single,
+                EmptyView = new Label
+                {
+                    Text = "🐶",
+                    FontSize = 128,
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.Center,
+                    HorizontalTextAlignment = TextAlignment.Center,
+                    VerticalTextAlignment = TextAlignment.Center,
+                }
             };
             collectionView.SelectionChanged += HandleCollectionViewCollectionChanged;
-            collectionView.SetBinding(CollectionView.ItemsSourceProperty, nameof(ImageListViewModel.DogImageCollection));
+            collectionView.SetBinding(CollectionView.ItemsSourceProperty, nameof(DogImageListViewModel.DogImageCollection));
 
-            _refreshView = new RefreshView { Content = collectionView };
-            _refreshView.SetBinding(RefreshView.IsRefreshingProperty, nameof(ImageListViewModel.IsDogImageCollectionRefreshing));
-            _refreshView.SetBinding(RefreshView.CommandProperty, nameof(ImageListViewModel.RefreshDogCollectionCommand));
+            _refreshView = new RefreshView
+            {
+                Content = collectionView,
+                RefreshColor = Color.Red
+            };
+            _refreshView.SetBinding(RefreshView.IsRefreshingProperty, nameof(DogImageListViewModel.IsDogImageCollectionRefreshing));
+            _refreshView.SetBinding(RefreshView.CommandProperty, nameof(DogImageListViewModel.RefreshDogCollectionCommand));
+
+            Title = "Dogs";
 
             Content = _refreshView;
         }
@@ -30,13 +47,16 @@ namespace DotNetGraphQL.Mobile
         {
             base.OnAppearing();
 
-            if(_refreshView.Content is CollectionView collectionView
+            if (_refreshView.Content is CollectionView collectionView
                 && collectionView.ItemsSource is ICollection<DogImagesModel> dogImagesCollection
                 && !dogImagesCollection.Any())
             {
                 _refreshView.IsRefreshing = true;
             }
         }
+
+        void HandlePullToRefreshFailed(object sender, string e) =>
+            Device.BeginInvokeOnMainThread(() => DisplayAlert("Refresh Failed", e, "OK"));
 
         async void HandleCollectionViewCollectionChanged(object sender, SelectionChangedEventArgs e)
         {

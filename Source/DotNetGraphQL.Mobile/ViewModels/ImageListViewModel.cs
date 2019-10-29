@@ -1,19 +1,29 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
+using AsyncAwaitBestPractices;
 using AsyncAwaitBestPractices.MVVM;
 using DotNetGraphQL.Common;
 using Xamarin.Forms;
 
 namespace DotNetGraphQL.Mobile
 {
-    class ImageListViewModel : BaseViewModel
+    class DogImageListViewModel : BaseViewModel
     {
+        readonly WeakEventManager<string> _pullToRefreshFailedEventManager = new WeakEventManager<string>();
+
         bool _isDogImageCollectionRefreshing;
 
-        public ImageListViewModel()
+        public DogImageListViewModel()
         {
             RefreshDogCollectionCommand = new AsyncCommand(ExecuteRefreshDogCollectionCommand, _ => !IsDogImageCollectionRefreshing);
+        }
+
+        public event EventHandler<string> PullToRefreshFailed
+        {
+            add => _pullToRefreshFailedEventManager.AddEventHandler(value);
+            remove => _pullToRefreshFailedEventManager.RemoveEventHandler(value);
         }
 
         public ObservableCollection<DogImagesModel> DogImageCollection { get; } = new ObservableCollection<DogImagesModel>();
@@ -36,10 +46,16 @@ namespace DotNetGraphQL.Mobile
                     DogImageCollection.Add(dogImageModel);
                 }
             }
+            catch(Exception e)
+            {
+                OnPullToRefreshFailed(e.Message);
+            }
             finally
             {
                 IsDogImageCollectionRefreshing = false;
             }
         }
+
+        void OnPullToRefreshFailed(string errorMessage) => _pullToRefreshFailedEventManager.HandleEvent(this, errorMessage, nameof(PullToRefreshFailed));
     }
 }

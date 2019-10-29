@@ -22,7 +22,7 @@ namespace DotNetGraphQL.Mobile
         {
             var graphQLRequest = new GraphQLRequest
             {
-                Query = "query{ dogs  { avatarUrl, birthDate, breed, coatColor } }" 
+                Query = "query { dogs  { avatarUrl, birthDate, breed, coatColor, imagesList, title, websiteUrl } }"
             };
 
             var gitHubUserResponse = await AttemptAndRetry(() => Client.SendQueryAsync(graphQLRequest)).ConfigureAwait(false);
