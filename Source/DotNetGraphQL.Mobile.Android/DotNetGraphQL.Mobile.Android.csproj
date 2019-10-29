@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{122BB7D3-865F-40B4-AE5A-19C0FC58A66A}</ProjectGuid>
+    <ProjectGuid>{6F0ED01C-728C-4C52-B91D-AE9E810D9335}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>DotNetGraphQL_EndToEnd.Droid</RootNamespace>
-    <AssemblyName>DotNetGraphQL_EndToEnd.Android</AssemblyName>
+    <RootNamespace>DotNetGraphQL.Mobile.Droid</RootNamespace>
+    <AssemblyName>DotNetGraphQL.Mobile.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -20,8 +20,8 @@
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <LangVersion>8.0</LangVersion>
-    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <Nullable>Enable</Nullable>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -49,7 +49,7 @@
     <AotAssemblies>true</AotAssemblies>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -73,6 +73,7 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <None Include="proguard.cfg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.xml" />
@@ -96,16 +97,13 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DotNetGraphQL_EndToEnd\DotNetGraphQL_EndToEnd.csproj">
-      <Project>{2D798169-8468-4CC2-AF6D-23EB919FCB2D}</Project>
+    <ProjectReference Include="..\DotNetGraphQL.Mobile\DotNetGraphQL.Mobile.csproj">
+      <Project>{6881E2A0-6663-4E4F-9AEF-B9B26C85D7A0}</Project>
       <Name>DotNetGraphQL.Mobile</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <LinkDescription Include="linker.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProguardConfiguration Include="proguard.cfg" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
