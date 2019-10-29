@@ -34,7 +34,7 @@ namespace DotNetGraphQL.API
 
             app.UseCors("AllowAll");
 
-            app.UseMiddleware<GraphQLMiddleware>(new GraphQLSettings("/api", true, ctx => new GraphQLUserContext(ctx.User)));
+            app.UseMiddleware<GraphQLMiddleware>(new GraphQLSettings(true, ctx => new GraphQLUserContext(ctx.User)));
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
