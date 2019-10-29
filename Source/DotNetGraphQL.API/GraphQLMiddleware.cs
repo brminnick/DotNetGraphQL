@@ -31,10 +31,10 @@ namespace DotNetGraphQL.API
 
         public Task Invoke(HttpContext context, ISchema schema)
         {
-            if (!IsGraphQLRequest(context))
-                return _next(context);
+            if (IsGraphQLRequest(context))
+                return ExecuteAsync(context, schema);
 
-            return ExecuteAsync(context, schema);
+            return _next(context);
         }
 
         static T Deserialize<T>(Stream stream)
