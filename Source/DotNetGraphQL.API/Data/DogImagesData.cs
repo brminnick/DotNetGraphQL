@@ -12,7 +12,8 @@ namespace DotNetGraphQL.API
 
         static List<DogImagesModel> CreateDogImageModels() => new List<DogImagesModel>
         {
-            GenerateKirbyModel()
+            GenerateKirbyModel(),
+            GenerateWafflesModel(),
         };
 
         static DogImagesModel GenerateKirbyModel()
@@ -33,6 +34,28 @@ namespace DotNetGraphQL.API
             var breed = "Golden Doodle";
             var coatColor = "Brown";
             var birthDate = new DateTime(2014, 03, 26);
+
+            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
+        }
+
+        static DogImagesModel GenerateWafflesModel()
+        {
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/a87618792f3f54bb2cd5de467c17bfda/5E4DDFDF/t51.2885-19/s320x320/46352155_1525523697551015_4631879936745930752_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com";
+            var websiteUrl = "https://www.instagram.com/hisnameiswaffles/";
+            var name = "Waffles";
+
+            var photosList = new List<string>
+            {
+                "https://scontent-sjc3-1.cdninstagram.com/vp/62735ce73ed50f10b083e63ee67777fd/5E469C5B/t51.2885-15/e35/s1080x1080/70594613_472808650109566_9086049796094395007_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/463d2f790dad456aa7f907fbc5c4f2d5/5E5E4DA2/t51.2885-15/e35/p1080x1080/68904319_153662302373174_5867607915252717949_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=102",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/6f094e68dcea3ce76025bc9a3aae1d10/5E4B5760/t51.2885-15/e35/p1080x1080/61615381_142948983481771_3906781618639463667_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=107",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/df20cab484e3fdce8e7b93be068cd955/5E5F68F4/t51.2885-15/e35/p1080x1080/60983676_671182750019423_8627416967785409822_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=111",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/4a5977fc6da543a3580dc65bec020f72/5E420BE3/t51.2885-15/e35/p1080x1080/60306434_315395119395230_9143171722741474046_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=102",
+            };
+
+            var breed = "Golden Doodle";
+            var coatColor = "Brown";
+            var birthDate = new DateTime(2016, 9, 25);
 
             return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
         }
