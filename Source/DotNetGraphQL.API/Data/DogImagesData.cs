@@ -15,7 +15,8 @@ namespace DotNetGraphQL.API
             GenerateKirbyModel(),
             GenerateWafflesModel(),
             GenerateWhiskeyModel(),
-            GenerateTobyModel()
+            GenerateTobyModel(),
+            GenerateMozzieModel()
         };
 
         static DogImagesModel GenerateKirbyModel()
@@ -104,6 +105,27 @@ namespace DotNetGraphQL.API
             var birthDate = new DateTime(2015, 2, 11);
 
             return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
+        }
+
+        static DogImagesModel GenerateMozzieModel()
+        {
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/5913ba9dc337bec65d32b336462dfa20/5E58A945/t51.2885-15/e35/33640369_226264147961207_7765603421549232128_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=111";
+            var websiteUrl = "https://www.instagram.com/mozziethepuppy/";
+            var name = "Mozzie";
+
+            var photosList = new List<string>
+            {
+                "https://scontent-sjc3-1.cdninstagram.com/vp/fc3b9167bdf9b9bb2596a56c9fbd6bbc/5E4C8D4C/t51.2885-15/e35/44788461_585502225220134_1741283381522447371_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/fe77df3e656cc2cc47e705bcc9b62491/5E5F8648/t51.2885-15/e35/20759134_1905007816418883_8680830969160138752_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=103",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/600852e58f21929c227b42a444b90e0d/5E58ACB1/t51.2885-15/e35/19425309_280400619034639_7395849394978816000_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=107",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/d5c3553c84fdd9a0dd066215292f789c/5E5C9C1E/t51.2885-15/e35/19379883_1916079598630295_6981673084306587648_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=111",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/5fa735a9f014218d43ff18ce5934e017/5E40E7EF/t51.2885-15/e35/17663597_1751930025118061_7905305431944200192_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=105"
+            };
+
+            var breed = "Mix";
+            var coatColor = "Brown";
+
+            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor);
         }
     }
 }
