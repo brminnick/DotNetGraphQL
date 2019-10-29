@@ -6,6 +6,12 @@ namespace DotNetGraphQL.Mobile
     {
         public App()
         {
+            FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration
+            {
+                HttpHeadersTimeout = 60
+            });
+
+            MainPage = new ImageListPage();
         }
     }
 }

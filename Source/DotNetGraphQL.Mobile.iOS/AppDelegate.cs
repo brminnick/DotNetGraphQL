@@ -8,6 +8,8 @@ namespace DotNetGraphQL.Mobile.iOS
     {
         public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
+            FFImageLoading.Forms.Platform.CachedImageRenderer.InitImageSourceHandler();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
