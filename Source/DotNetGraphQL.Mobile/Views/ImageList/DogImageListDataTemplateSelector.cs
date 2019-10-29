@@ -14,10 +14,11 @@ namespace DotNetGraphQL.Mobile
             {
             }
 
-            static Grid CreateImageLayout(DogImagesModel dogImagesModel)
+            static Layout CreateImageLayout(DogImagesModel dogImagesModel)
             {
                 const int circleImageHeight = 90;
                 const int fontSize = 12;
+                const int padding = 5;
 
                 var avatarImage = new CircleImage
                 {
@@ -52,11 +53,10 @@ namespace DotNetGraphQL.Mobile
                     Text = $"🎂 {dogImagesModel.BirthDate?.ToString("MMMM dd yyyy") ?? "Unknown"}"
                 };
 
-                var grid = new Grid
+                var contentGrid = new Grid
                 {
                     BackgroundColor = Color.Transparent,
 
-                    Padding = new Thickness(2, 0, 5, 0),
                     RowSpacing = 2,
                     ColumnSpacing = 3,
 
@@ -78,15 +78,38 @@ namespace DotNetGraphQL.Mobile
                     }
                 };
 
-                grid.Children.Add(avatarImage, 0, 0);
+                contentGrid.Children.Add(avatarImage, 0, 0);
                 Grid.SetRowSpan(avatarImage, 6);
 
-                grid.Children.Add(dogNameTitleLabel, 2, 1);
-                grid.Children.Add(dogBreedLabel, 2, 2);
-                grid.Children.Add(coatColorLabel, 2, 3);
-                grid.Children.Add(birthDateLabel, 2, 4);
+                contentGrid.Children.Add(dogNameTitleLabel, 2, 1);
+                contentGrid.Children.Add(dogBreedLabel, 2, 2);
+                contentGrid.Children.Add(coatColorLabel, 2, 3);
+                contentGrid.Children.Add(birthDateLabel, 2, 4);
 
-                return grid;
+                var contentFrame = new Frame
+                {
+                    CornerRadius = 7,
+                    Padding = new Thickness(5, 10),
+                    BackgroundColor = Color.FromHex("8BB6D6"),
+                    Content = contentGrid
+                };
+
+                var rowGrid = new Grid
+                {
+                    RowDefinitions = {
+                        new RowDefinition { Height = new GridLength(padding, GridUnitType.Absolute) },
+                        new RowDefinition { Height = new GridLength(1, GridUnitType.Star) },
+                    },
+                    ColumnDefinitions = {
+                        new ColumnDefinition { Width = new GridLength(padding / 2, GridUnitType.Absolute) },
+                        new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
+                        new ColumnDefinition { Width = new GridLength(padding / 2, GridUnitType.Absolute) }
+                    }
+                };
+
+                rowGrid.Children.Add(contentFrame, 1, 1);
+
+                return rowGrid;
             }
 
             class DarkBlueLabel : Label
@@ -95,7 +118,7 @@ namespace DotNetGraphQL.Mobile
 
                 public DarkBlueLabel()
                 {
-                    TextColor = Color.Navy;
+                    TextColor = Color.FromHex("1F2B2E");
                     HorizontalTextAlignment = TextAlignment.Start;
                     VerticalTextAlignment = TextAlignment.Center;
                 }

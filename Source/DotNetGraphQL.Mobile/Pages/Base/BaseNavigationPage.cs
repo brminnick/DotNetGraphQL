@@ -8,6 +8,9 @@ namespace DotNetGraphQL.Mobile
         public BaseNavigationPage(Xamarin.Forms.Page root) : base(root)
         {
             On<iOS>().SetPrefersLargeTitles(true);
+
+            BarBackgroundColor = Xamarin.Forms.Color.FromHex("765824");
+            BarTextColor = Xamarin.Forms.Color.White;
         }
     }
 }

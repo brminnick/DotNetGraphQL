@@ -7,7 +7,11 @@ namespace DotNetGraphQL.Mobile
 {
     abstract class BaseContentPage<T> : ContentPage where T : BaseViewModel, new()
     {
-        protected BaseContentPage() => BindingContext = ViewModel;
+        protected BaseContentPage()
+        {
+            BindingContext = ViewModel;
+            BackgroundColor = Color.FromHex("65859C");
+        }
 
         protected T ViewModel { get; } = new T();
 
