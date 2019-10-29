@@ -59,8 +59,8 @@ namespace DotNetGraphQL.API
             {
                 options.Schema = schema;
                 options.Query = request.Query;
-                options.OperationName = request.OperationName;
-                options.Inputs = request.Variables.ToInputs();
+                options.OperationName = request.OperationName ?? string.Empty;
+                options.Inputs = request.Variables?.ToInputs();
                 options.UserContext = _settings.BuildUserContext.Invoke(context);
                 options.ValidationRules = DocumentValidator.CoreRules.Concat(new[] { new InputValidationRule() });
                 options.EnableMetrics = _settings.EnableMetrics;

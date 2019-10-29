@@ -1,39 +1,38 @@
 using GraphQL;
 using GraphQL.Http;
+using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace DotNetGraphQL.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration) => Configuration = configuration;
-
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
             services.AddSingleton<IDocumentWriter, DocumentWriter>();
 
-            //ToDo Add GraphQL Singletons & ISchema
+            services.AddSingleton<ISchema, ImagesSchema>();
 
+            services.AddCors(options =>
+                                options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                .AllowAnyMethod()
+                                .AllowAnyHeader()));
             services.AddLogging(builder => builder.AddConsole());
-            services.AddHttpContextAccessor();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
 
-            app.UseHttpsRedirection();
+            app.UseCors("AllowAll");
 
             app.UseMiddleware<GraphQLMiddleware>(new GraphQLSettings("/api", true, ctx => new GraphQLUserContext(ctx.User)));
 
