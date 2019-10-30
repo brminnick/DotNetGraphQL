@@ -17,7 +17,7 @@ namespace DotNetGraphQL.Mobile
             static Layout CreateImageLayout(DogImagesModel dogImagesModel)
             {
                 const int circleImageHeight = 90;
-                const int fontSize = 12;
+                const int fontSize = 16;
                 const int padding = 5;
 
                 var avatarImage = new CircleImage
@@ -31,6 +31,7 @@ namespace DotNetGraphQL.Mobile
                 var dogNameTitleLabel = new DarkBlueLabel
                 {
                     Text = dogImagesModel.Title,
+                    FontSize = fontSize * 4 / 3,
                     FontAttributes = FontAttributes.Bold,
                     HorizontalTextAlignment = TextAlignment.Start,
                     VerticalTextAlignment = TextAlignment.Start,
@@ -65,7 +66,7 @@ namespace DotNetGraphQL.Mobile
 
                     RowDefinitions = {
                         new RowDefinition { Height = new GridLength(1, GridUnitType.Absolute) },
-                        new RowDefinition { Height = new GridLength(20, GridUnitType.Absolute) },
+                        new RowDefinition { Height = new GridLength(fontSize * 4/3 + 5, GridUnitType.Absolute) },
                         new RowDefinition { Height = new GridLength(fontSize + 5, GridUnitType.Absolute) },
                         new RowDefinition { Height = new GridLength(fontSize + 5, GridUnitType.Absolute) },
                         new RowDefinition { Height = new GridLength(fontSize + 5, GridUnitType.Absolute) },

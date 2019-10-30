@@ -33,7 +33,7 @@ namespace DotNetGraphQL.Mobile
             _refreshView = new RefreshView
             {
                 Content = collectionView,
-                RefreshColor = Color.Red
+                RefreshColor = Color.FromHex("1F2B2E")
             };
             _refreshView.SetBinding(RefreshView.IsRefreshingProperty, nameof(DogImageListViewModel.IsDogImageCollectionRefreshing));
             _refreshView.SetBinding(RefreshView.CommandProperty, nameof(DogImageListViewModel.RefreshDogCollectionCommand));
