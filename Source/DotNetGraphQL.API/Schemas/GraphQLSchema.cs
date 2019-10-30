@@ -7,7 +7,6 @@ namespace DotNetGraphQL.API
         public ImagesSchema()
         {
             Query = new ImagesQuery();
-            //Mutation = resolver.Resolve<GotMutation>();
         }
     }
 }

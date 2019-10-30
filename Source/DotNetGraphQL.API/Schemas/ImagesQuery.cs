@@ -12,16 +12,9 @@ namespace DotNetGraphQL.API
         {
             Name = "Query";
 
-            Field<ListGraphType<DogImagesGraphType>>("dogs", resolve: context => DogImagesData.DogImages);
             Field<DogImagesGraphType>("dog", "Query a specific dog",
                     new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "name", Description = "Dog Name" }),
                     context => DogImagesData.DogImages.Single(x => x.Title.Equals("name", StringComparison.OrdinalIgnoreCase)));
-            Field<ListGraphType<DogImagesGraphType>>("dogsByCoatColorOrBreed", "Query dogs",
-                    new QueryArguments(
-                        new QueryArgument<StringGraphType> { Name = "coatColor", Description = "Dog Coat Color" },
-                        new QueryArgument<StringGraphType> { Name = "breed", Description = "Dog Breed" }
-                    ),
-                    context => GetDogImagesByNameOrBreed(context.GetArgument<string>("coatColor"), context.GetArgument<string>("breed")));
 
         }
 

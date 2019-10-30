@@ -41,10 +41,7 @@ namespace DotNetGraphQL.Mobile
 
             try
             {
-                await foreach(var dogImageModel in GraphQLService.GetDogImages())
-                {
-                    DogImageCollection.Add(dogImageModel);
-                }
+                //Todo Get Dogs from GraphQL Backend
             }
             catch(Exception e)
             {
