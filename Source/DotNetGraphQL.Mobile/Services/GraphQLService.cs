@@ -7,7 +7,6 @@ using GraphQL.Client.Http;
 using GraphQL.Common.Exceptions;
 using GraphQL.Common.Request;
 using GraphQL.Common.Response;
-using ModernHttpClient;
 using Polly;
 
 namespace DotNetGraphQL.Mobile
@@ -35,7 +34,7 @@ namespace DotNetGraphQL.Mobile
         {
             EndPoint = new Uri(BackendConstants.GraphQLApiUrl),
 #if !DEBUG
-            HttpMessageHandler = new NativeMessageHandler()
+            HttpMessageHandler = new ModernHttpClient.NativeMessageHandler()
 #endif
         });
 
