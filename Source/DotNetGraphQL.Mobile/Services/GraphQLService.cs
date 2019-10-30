@@ -34,7 +34,9 @@ namespace DotNetGraphQL.Mobile
         static GraphQLHttpClient CreateGraphQLClient() => new GraphQLHttpClient(new GraphQLHttpClientOptions
         {
             EndPoint = new Uri(BackendConstants.GraphQLApiUrl),
+#if !DEBUG
             HttpMessageHandler = new NativeMessageHandler()
+#endif
         });
 
         static async Task<GraphQLResponse> AttemptAndRetry(Func<Task<GraphQLResponse>> action, int numRetries = 2)
