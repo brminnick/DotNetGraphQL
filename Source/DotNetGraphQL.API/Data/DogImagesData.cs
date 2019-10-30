@@ -27,11 +27,11 @@ namespace DotNetGraphQL.API
 
             var photosList = new List<string>
             {
-                "https://scontent-sjc3-1.cdninstagram.com/vp/787be42ce318c9d7765adb2990fc74c4/5E487588/t51.2885-15/sh0.08/e35/s640x640/73372153_2592246320828883_830613847567368174_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=103",
-                "https://scontent-sjc3-1.cdninstagram.com/vp/7dc7f71a26152d0fe0dfc1260b9cd89c/5E5B8C4D/t51.2885-15/sh0.08/e35/s750x750/56619906_2259486890992190_8081895007514680504_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=102",
-                "https://scontent-sjc3-1.cdninstagram.com/vp/84b9abf586714af26aa7a3dc5449e4ee/5E4644FD/t51.2885-15/sh0.08/e35/p750x750/46252247_345830652815597_366371020653368487_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=105",
-                "https://scontent-sjc3-1.cdninstagram.com/vp/557d04b5e9d0fda7b16b763ae154ab31/5E468B4F/t51.2885-15/sh0.08/e35/s750x750/40022236_2195986720641841_3833817043975536640_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=101",
-                "https://scontent-sjc3-1.cdninstagram.com/vp/31219d4bffde230c3f443753541068dc/5E43709E/t51.2885-15/sh0.08/e35/p750x750/37719878_1655035381290328_2281852859496529920_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=104",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/c191bde43f30d153a0e6f14d268899d7/5E3E5E59/t51.2885-15/e35/16906877_256386878145018_3660463037103472640_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=106",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/c41a8852ad9f767142023c3aee0b2bc2/5E64935C/t51.2885-15/e35/15258568_1837703606502348_6968759831339466752_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=100",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/bdbdd86ae01663b0f2682e5188235bd5/5E5BE931/t51.2885-15/e35/40022236_2195986720641841_3833817043975536640_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=101",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/3f4fc8c9a519398ed564dd4b39075a2a/5E546C7D/t51.2885-15/e35/13743278_1069261413162264_576463155_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=100",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/78c245bfd5afc9f0d9a21d5ed86acc91/5E5C5E95/t51.2885-15/e35/13706978_577881049040730_1166627530_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=106"
             };
 
             var breed = "Goldendoodle";
@@ -124,8 +124,9 @@ namespace DotNetGraphQL.API
 
             var breed = "Mix";
             var coatColor = "Brown";
+            var birthDate = new DateTime(2016, 10, 28);
 
-            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor);
+            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
         }
     }
 }

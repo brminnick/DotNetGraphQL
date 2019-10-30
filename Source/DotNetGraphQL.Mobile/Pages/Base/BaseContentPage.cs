@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -14,6 +18,19 @@ namespace DotNetGraphQL.Mobile
         }
 
         protected T ViewModel { get; } = new T();
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            //If Collection View is Empty, Manually Trigger a Pull-to-Refresh
+            if (Content is RefreshView refreshView
+                && refreshView.Content is CollectionView collectionView
+                && !collectionView.ItemsSource.GetEnumerator().MoveNext())
+            {
+                refreshView.IsRefreshing = true;
+            }
+        }
 
         protected Task OpenBrowser(Uri uri) => Device.InvokeOnMainThreadAsync(() => Browser.OpenAsync(uri));
 

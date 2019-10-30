@@ -38,21 +38,9 @@ namespace DotNetGraphQL.Mobile
             _refreshView.SetBinding(RefreshView.IsRefreshingProperty, nameof(DogImageListViewModel.IsDogImageCollectionRefreshing));
             _refreshView.SetBinding(RefreshView.CommandProperty, nameof(DogImageListViewModel.RefreshDogCollectionCommand));
 
-            Title = "Dogs";
+            Title = "Favorite Dogs";
 
             Content = _refreshView;
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            if (_refreshView.Content is CollectionView collectionView
-                && collectionView.ItemsSource is ICollection<DogImagesModel> dogImagesCollection
-                && !dogImagesCollection.Any())
-            {
-                _refreshView.IsRefreshing = true;
-            }
         }
 
         void HandlePullToRefreshFailed(object sender, string e) =>
