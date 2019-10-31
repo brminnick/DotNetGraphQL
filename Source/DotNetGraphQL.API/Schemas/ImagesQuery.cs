@@ -14,7 +14,7 @@ namespace DotNetGraphQL.API
 
             Field<DogImagesGraphType>("dog", "Query a specific dog",
                     new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "name", Description = "Dog Name" }),
-                    context => DogImagesData.DogImages.Single(x => x.Title.Equals(context.GetArgument<string>("name"), StringComparison.OrdinalIgnoreCase)));
+                    context => DogImagesData.DogImages.Single(dog => dog.Title.Equals(context.GetArgument<string>("name"), StringComparison.OrdinalIgnoreCase)));
         }
     }
 }
