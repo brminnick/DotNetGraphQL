@@ -1,6 +1,6 @@
 # .Net GraphQL
 
-New to Xamarin + GraphQL? Check out the [Xamarin + GraphQL](https://youtu.be/t1cQsenAmNo?t=18575) video from [Xamarin Developers Summit](https://www.codetraveler.io/xamdevsummit-graphql) in the [Learn More section, below](#learn-more).
+Check out the [Xamarin + GraphQL](https://youtu.be/t1cQsenAmNo?t=18575) video from [Xamarin Developers Summit](https://www.codetraveler.io/xamdevsummit-graphql) in the [Learn More section, below](#learn-more).
 
 To run this sample, follow the [Getting Started Instructions, below](#getting-started)!
 
