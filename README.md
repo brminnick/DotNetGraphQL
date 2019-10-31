@@ -1,11 +1,11 @@
 # DotNetGraphQL
 
-New to Xamarin + GraphQL? Check out [this video from Xamarin Developers Summit](#video-recording).
+New to Xamarin + GraphQL? Check out [this video from Xamarin Developers Summit](#learn-more).
 
 To run this sample, follow the [Getting Started Instructions, below](#getting-started)!
 
 ### Mobile
-The mobile app is created in C# using [Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=DotNetGraphQL-github-bramin) and the [GraphQL.Client NuGet Package](https://www.nuget.org/packages/GraphQL.Client/) 
+The mobile app is created in C# using [Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=DotNetGraphQL-github-bramin) and the [GraphQL.Client NuGet Package](https://www.nuget.org/packages/GraphQL.Client/).
 
 | Xamarin.iOS | Xamarin.Android |
 | ----------- | --------------- |
@@ -44,7 +44,7 @@ cd [path to DotNetGraphQL folder]\Source\DotNetGraphQL.API\
 cd [path to DotNetGraphQL folder]/Source/DotNetGraphQL.API/
 ```
 
-4. In the **terminal**, run DotNetGraphQL.API.csproj by entering the following command:
+4. In the **terminal**, run `DotNetGraphQL.API.csproj` by entering the following command:
 
 ```bash
 dotnet run
