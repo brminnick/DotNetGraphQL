@@ -34,25 +34,25 @@ git clone https://github.com/brminnick/dotnetgraphql.git
 
 3. In the **terminal**, navigate to the `DotNetGraphQL.API` folder by entering the following command:
 
-- Windows
+- On Windows
 
 ```bash
 cd [path to DotNetGraphQL folder]\Source\DotNetGraphQL.API\
 ```
-- macOS
+- On macOS
 ```bash
 cd [path to DotNetGraphQL folder]/Source/DotNetGraphQL.API/
 ```
 
-3. In the **terminal**, run DotNetGraphQL.API.csproj by entering the following command:
+4. In the **terminal**, run DotNetGraphQL.API.csproj by entering the following command:
 
 ```bash
 dotnet run
 ```
 
-4. Open a web browser
-5. In the web browser, navgiate to `http://localhost:4000`
-6. Confirm GraphiQL
+5. Open a web browser
+6. In the web browser, navgiate to `http://localhost:4000`
+7. Confirm GraphiQL
 
 ### Run the Xamarin.Android App
 
