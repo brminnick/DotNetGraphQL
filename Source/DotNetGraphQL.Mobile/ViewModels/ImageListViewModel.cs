@@ -43,7 +43,7 @@ namespace DotNetGraphQL.Mobile
             {
                 //Todo Get Dogs from GraphQL Backend
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 OnPullToRefreshFailed(e.Message);
             }
