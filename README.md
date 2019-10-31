@@ -3,6 +3,8 @@ This sample demonstrates how to create a GraphQL Backend in .NET and consume it 
 
 New to Xamarin + GraphQL? Check out [this video from Xamarin Developers Summit](#videorecording).
 
+To run this sample, follow the [Getting Started Instructions, below](#gettingstarted)!
+
 ### Mobile
 The mobile app is created in C# using [Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=DotNetGraphQL-github-bramin) and the [GraphQL.Client NuGet Package](https://www.nuget.org/packages/GraphQL.Client/) 
 
@@ -16,6 +18,50 @@ The GraphQL backend is created in C# using the [GraphQL NuGet Package](https://w
 | GraphiQL |
 | -------- |
 | ![GraphiQL](https://user-images.githubusercontent.com/13558917/67914743-3a8f4700-fb4e-11e9-936d-320dfdd5d874.png) |
+
+## Getting Started
+
+This app requires us to run the GraphQL API using the terminal while using Visual Studio to build/deploy the Xamarin.iOS and/or Xamarin.Android app.
+
+### Run the GraphQL API
+
+1. Open the **terminal**
+2. In the **terminal**, clone this solution by entering the following command:
+    - **Note:** If you have already downloaded the solution, skip this step
+
+```bash
+git clone https://github.com/brminnick/dotnetgraphql.git
+```
+
+3. In the **terminal**, navigate to the `DotNetGraphQL.API` folder by entering the following command:
+
+- Windows
+
+```bash
+cd [path to DotNetGraphQL folder]\Source\DotNetGraphQL.API\
+```
+- macOS
+```bash
+cd [path to DotNetGraphQL folder]/Source/DotNetGraphQL.API/
+```
+
+3. In the **terminal**, run DotNetGraphQL.API.csproj by entering the following command:
+
+```bash
+dotnet run
+```
+
+4. Open a web browser
+5. In the web browser, navgiate to `http://localhost:4000`
+6. Confirm GraphiQL
+
+### Run the Xamarin.Android App
+
+1. In **Visual Studio**, open `DotNetGraphQL/Source/DotNetGraphQL.sln`
+2. In **Visual Studio**, in the **Solution Explorer**, right-click on **DotNetGraphQL.Android**
+3. In the right-click menu, select **Set as Startup Project**
+4. In **Visual Studio**, build/deploy **DotNetGraphQL.Android** to an Android device
+6. Confirm the list of dogs from the GraphQL API appears
 
 ## Learn More
 
