@@ -4,19 +4,19 @@ Check out the [Xamarin + GraphQL](https://youtu.be/t1cQsenAmNo?t=18575) video fr
 
 To run this sample, follow the [Getting Started Instructions, below](#getting-started)!
 
-### Mobile
-The mobile app is created in C# using [Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=DotNetGraphQL-github-bramin) and the [GraphQL.Client NuGet Package](https://www.nuget.org/packages/GraphQL.Client/).
-
-| Xamarin.iOS | Xamarin.Android |
-| ----------- | --------------- |
-| <img src="https://user-images.githubusercontent.com/13558917/67914056-44b04600-fb4c-11e9-98ee-9d7ecb1bbc65.png" height="600"> | <img src="https://user-images.githubusercontent.com/13558917/67915040-16803580-fb4f-11e9-80c2-ae91a25f4e7b.png" height="550"> | 
-
 ### GraphQL Backend
 The GraphQL backend is created in C# using the [GraphQL NuGet Package](https://www.nuget.org/packages/GraphQL/).
 
 | GraphiQL |
 | -------- |
 | ![GraphiQL](https://user-images.githubusercontent.com/13558917/67914743-3a8f4700-fb4e-11e9-936d-320dfdd5d874.png) |
+
+### Mobile
+The mobile app is created in C# using [Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=DotNetGraphQL-github-bramin) and the [GraphQL.Client NuGet Package](https://www.nuget.org/packages/GraphQL.Client/).
+
+| Xamarin.iOS | Xamarin.Android |
+| ----------- | --------------- |
+| <img src="https://user-images.githubusercontent.com/13558917/67914056-44b04600-fb4c-11e9-98ee-9d7ecb1bbc65.png" height="600"> | <img src="https://user-images.githubusercontent.com/13558917/67915040-16803580-fb4f-11e9-80c2-ae91a25f4e7b.png" height="550"> | 
 
 ## Getting Started
 
