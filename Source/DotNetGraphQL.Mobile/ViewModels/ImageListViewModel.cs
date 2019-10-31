@@ -6,6 +6,7 @@ using AsyncAwaitBestPractices;
 using AsyncAwaitBestPractices.MVVM;
 using DotNetGraphQL.Common;
 using GraphQL.Client.Http;
+using GraphQL.Common.Request;
 using Xamarin.Forms;
 
 namespace DotNetGraphQL.Mobile
