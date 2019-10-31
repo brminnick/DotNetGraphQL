@@ -1,5 +1,4 @@
 # DotNetGraphQL
-This sample demonstrates how to create a GraphQL Backend in .NET and consume it from a .NET mobile app using Xamarin.
 
 New to Xamarin + GraphQL? Check out [this video from Xamarin Developers Summit](#videorecording).
 
