@@ -1,8 +1,8 @@
 # DotNetGraphQL
 
-New to Xamarin + GraphQL? Check out [this video from Xamarin Developers Summit](#videorecording).
+New to Xamarin + GraphQL? Check out [this video from Xamarin Developers Summit](#video-recording).
 
-To run this sample, follow the [Getting Started Instructions, below](#gettingstarted)!
+To run this sample, follow the [Getting Started Instructions, below](#getting-started)!
 
 ### Mobile
 The mobile app is created in C# using [Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=DotNetGraphQL-github-bramin) and the [GraphQL.Client NuGet Package](https://www.nuget.org/packages/GraphQL.Client/) 
