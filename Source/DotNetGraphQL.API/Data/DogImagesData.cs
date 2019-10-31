@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using DotNetGraphQL.Common;
 
 namespace DotNetGraphQL.API
@@ -38,7 +39,7 @@ namespace DotNetGraphQL.API
             var coatColor = "Brown";
             var birthDate = new DateTime(2014, 03, 26);
 
-            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
+            return new DogModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
         }
 
         static DogImagesModel GenerateWafflesModel()
@@ -60,7 +61,7 @@ namespace DotNetGraphQL.API
             var coatColor = "Brown";
             var birthDate = new DateTime(2016, 9, 25);
 
-            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
+            return new DogModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
         }
 
         static DogImagesModel GenerateWhiskeyModel()
@@ -82,7 +83,7 @@ namespace DotNetGraphQL.API
             var coatColor = "Brown";
             var birthDate = new DateTime(2014, 9, 27);
 
-            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
+            return new DogModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
         }
 
         static DogImagesModel GenerateTobyModel()
@@ -104,7 +105,7 @@ namespace DotNetGraphQL.API
             var coatColor = "Brown";
             var birthDate = new DateTime(2015, 2, 11);
 
-            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
+            return new DogModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
         }
 
         static DogImagesModel GenerateMozzieModel()
@@ -126,7 +127,23 @@ namespace DotNetGraphQL.API
             var coatColor = "Brown";
             var birthDate = new DateTime(2016, 10, 28);
 
-            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
+            return new DogModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
+        }
+
+        class DogModel : DogImagesModel
+        {
+            public DogModel(string avatarUrl, string websiteUrl, string name,
+                            IEnumerable<string> photosList, string breed,
+                            string coatColor, DateTime? birthDate)
+            {
+                AvatarUrl = avatarUrl;
+                WebsiteUrl = websiteUrl;
+                Title = name;
+                ImagesList = photosList.ToList();
+                Breed = breed;
+                CoatColor = coatColor;
+                BirthDate = birthDate;
+            }
         }
     }
 }
