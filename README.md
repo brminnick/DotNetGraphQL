@@ -26,7 +26,7 @@ The mobile app is created in C# using [Xamarin](https://docs.microsoft.com/xamar
 
 This app requires us to run the GraphQL API using the terminal while using Visual Studio to build/deploy the Xamarin.iOS and/or Xamarin.Android app.
 
-### Run the GraphQL API
+### 1. Run the GraphQL API
 
 1. Open the **terminal**
 2. In the **terminal**, clone this solution by entering the following command:
@@ -58,7 +58,7 @@ dotnet run
 6. In the web browser, navgiate to `http://localhost:4000`
 7. Confirm GraphiQL
 
-### Run the Xamarin.Android App
+### 2. Run the Xamarin.Android App
 
 1. In **Visual Studio**, open `DotNetGraphQL/Source/DotNetGraphQL.sln`
 2. In **Visual Studio**, in the **Solution Explorer**, right-click on **DotNetGraphQL.Android**
