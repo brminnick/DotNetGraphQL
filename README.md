@@ -1,7 +1,7 @@
 # .Net GraphQL
 
 If you're new to GraphQL, check out these videos featured in the [Learn More section, below](#learn-more):
-- [Learning GraphQL Series](#learning-graphql-series-on-channel-9)
+- [Learning GraphQL Series](#learning-graphql-series)
 - [Xamarin + GraphQL](#xamarin--graphql)
 
 To run this sample, follow the [Getting Started Instructions, below](#getting-started).
@@ -106,4 +106,4 @@ The session on Xamarin + GraphQL was delivered at [Xamarin Developer Summit 2019
 
 This special series teaches the basics of GraphQL, how to interact with an existing GraphQL endpoint, how to create your first GraphQL Server, and how to deploy your GraphQL Server to the cloud using Azure! 
 
-[![Learning GraphQL Series]](https://channel9.msdn.com/Series/GraphQL?WT.mc_id=DotNetGraphQL-github-bramin)
+[![Learning GraphQL Series](https://sec.ch9.ms/ch9/167c/d62bfc00-95ae-42a1-ab23-af9b9602167c/IntrotoGraphQL_512.jpg)](https://channel9.msdn.com/Series/GraphQL?WT.mc_id=DotNetGraphQL-github-bramin)
