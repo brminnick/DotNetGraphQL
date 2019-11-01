@@ -16,7 +16,9 @@ namespace DotNetGraphQL.API
             GenerateWafflesModel(),
             GenerateWhiskeyModel(),
             GenerateTobyModel(),
-            GenerateMozzieModel()
+            GenerateMozzieModel(),
+            GenerateMiloModel(),
+            GeneratePiperModel()
         };
 
         static DogImagesModel GenerateKirbyModel()
