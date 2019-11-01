@@ -128,5 +128,46 @@ namespace DotNetGraphQL.API
 
             return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
         }
+
+        static DogImagesModel GeneratePiperModel()
+        {
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/87132851249bbe49a1e363f5c640fbaa/5E56508F/t51.2885-19/s320x320/13734519_132392700533008_236125809_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com";
+            var websiteUrl = "https://www.instagram.com/piper.bt/";
+            var name = "Piper";
+
+            var photosList = new List<string>
+            {
+                "https://scontent-sjc3-1.cdninstagram.com/vp/3f8fe47bb1c7a7c2d736276055cd6c87/5E5B126D/t51.2885-15/e35/57377602_878432729165265_5451422134633129153_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=109",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/b8b5dbcfcfeb37df1e93521c4fbf165f/5E458BE9/t51.2885-15/e35/14498894_246013109150758_7047888118367649792_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/d608136a5adef62f488b614690716cd5/5E490240/t51.2885-15/e35/13696797_754628597974092_928639078_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=100",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/9a3fe9cb0d2bd8a2268ea24f8f4b7ce0/5E47F579/t51.2885-15/e35/13636072_516768001858171_1831331040_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=107",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/2d80bcae51410106e3e24b3e42019f57/5E6164C7/t51.2885-15/e35/13671684_574529282754717_589202646_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=109"
+            };
+
+            var breed = "Bull Dog";
+            var coatColor = "Black";
+
+            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor);
+        }
+
+        static DogImagesModel GenerateMiloModel()
+        {
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/6a0024b89ed2548ecbb6ef50964479c0/5E639DFB/t51.2885-15/e35/57468059_604190606716273_5699381031045146998_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=101";
+            var websiteUrl = "https://www.instagram.com/frenchton.milo/";
+            var name = "Milo";
+
+            var photosList = new List<string>
+            {
+                "https://scontent-sjc3-1.cdninstagram.com/vp/8374bbf2c74521ace371c394ac6e70bc/5E4941B7/t51.2885-15/e35/56997710_2131534730276762_1880919774551388605_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=102",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/876930081aab45c31f4f292c5faf928d/5E5D86F9/t51.2885-15/e35/56749582_282780475992859_5518627445828391985_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=107",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/11788b4b4328b52e186263cd428a1486/5E4069DB/t51.2885-15/e35/58410888_2241646182762355_3360640618704941668_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=107",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/4f154f228259d9866a2c3341001bafc7/5E4B8BE6/t51.2885-15/e35/60233054_2323665944620016_5770986023083779017_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=108"
+           };
+
+            var breed = "Bull Dog";
+            var coatColor = "Black";
+
+            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor);
+        }
     }
 }
