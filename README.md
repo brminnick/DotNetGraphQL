@@ -1,6 +1,6 @@
 # .Net GraphQL
 
-Check out the [Xamarin + GraphQL](https://youtu.be/t1cQsenAmNo?t=18575) video from [Xamarin Developers Summit](https://www.codetraveler.io/xamdevsummit-graphql) in the [Learn More section, below](#learn-more).
+If you're new to GraphQL, check out the [Xamarin + GraphQL](#learn-more) video from [Xamarin Developers Summit](https://www.codetraveler.io/xamdevsummit-graphql) featured in the [Learn More section, below](#learn-more).
 
 To run this sample, follow the [Getting Started Instructions, below](#getting-started).
 
@@ -64,9 +64,11 @@ dotnet run
 4. In **Visual Studio**, build/deploy **DotNetGraphQL.Android** to an Android device
 6. Confirm the list of dogs from the GraphQL API appears
 
-## Learn More
+# Learn More
 
 Learn more about Xamarin + GraphQL
+
+## Docs
 
 ### Xamarin Resources
 
@@ -90,7 +92,15 @@ Learn more about Xamarin + GraphQL
 - [GraphQL vs OData](https://jeffhandley.com/2018-09-13/graphql-is-not-odata)
 - [Awesome GraphQL](https://github.com/chentsulin/awesome-graphql)
 
-### Video Recording
+## Video Recordings
+
+### Xamarin + GraphQL
 The session on Xamarin + GraphQL was delivered at [Xamarin Developer Summit 2019](https://www.codetraveler.io/xamdevsummit-graphql/) and its recording is available on YouTube: https://youtu.be/t1cQsenAmNo?t=18575
 
-[![Xamarin + GraphQL Video](https://user-images.githubusercontent.com/13558917/61256668-6a8f1780-a722-11e9-97ad-8188ec6eab8f.png)](https://youtu.be/t1cQsenAmNo?t=18575)
+[![Xamarin + GraphQL Video](https://user-images.githubusercontent.com/13558917/61256668-6a8f1780-a722-11e9-97ad-8188ec6eab8f.png)](https://channel9.msdn.com/Events/Xamarin/Xamarin-Developer-Summit-2019/XamarinGraphQL?WT.mc_id=DotNetGraphQL-github-bramin)
+
+### Learning GraphQL Series on Channel 9
+
+Join us in this special series where you'll learn the basics of GraphQL, how to interact with an existing GraphQL endpoint, how to create your first GraphQL Server, and how to deploy your GraphQL Server to the cloud using Azure! 
+
+[![Learning GraphQL Series](https://channel9.msdn.com/Series/GraphQL?WT.mc_id=DotNetGraphQL-github-bramin)
