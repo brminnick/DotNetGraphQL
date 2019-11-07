@@ -18,7 +18,9 @@ namespace DotNetGraphQL.API
             GenerateTobyModel(),
             GenerateMozzieModel(),
             GenerateMiloModel(),
-            GeneratePiperModel()
+            GeneratePiperModel(),
+            GenerateMagicModel(),
+            GenerateHermesModel()
         };
 
         static DogImagesModel GenerateKirbyModel()
@@ -170,6 +172,48 @@ namespace DotNetGraphQL.API
             var coatColor = "Black";
 
             return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor);
+        }
+        
+        static DogImagesModel GenerateMagicModel()
+        {
+            var avatarUrl = "https://photos.app.goo.gl/DCQKJhmFJpaT95aw6";
+            var websiteUrl = "";
+            var name = "Magic";
+
+            var photosList = new List<string>
+            {
+                "https://photos.app.goo.gl/DCQKJhmFJpaT95aw6",
+                "https://photos.app.goo.gl/F5sTEonPk4YZAzmbA",
+                "https://photos.app.goo.gl/zQfWDXPecNLqFZ5WA",
+                "https://photos.app.goo.gl/wDmy1mDwUGwPXp937"
+            };
+
+            var breed = "Golden Retriever";
+            var coatColor = "Yellow";
+            var birthDate = new DateTime(2012, 04, 01);
+
+            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
+        }
+        
+        static DogImagesModel GenerateHermesModel()
+        {
+            var avatarUrl = "https://photos.app.goo.gl/GpgknJpTPRQN6pN68";
+            var websiteUrl = "";
+            var name = "Hermes";
+
+            var photosList = new List<string>
+            {
+                "https://photos.app.goo.gl/aS4csximmR8ipYE59",
+                "https://photos.app.goo.gl/MH5Xbe9T6tx4GCtE6",
+                "https://photos.app.goo.gl/2LV94s7nexSAjcoN6",
+                "https://photos.app.goo.gl/f9xpimwiffr8F9XUA"
+            };
+
+            var breed = "Shorkie";
+            var coatColor = "Brown";
+            var birthDate = new DateTime(2017, 05, 30);
+
+            return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
         }
     }
 }
