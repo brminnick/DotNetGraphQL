@@ -176,16 +176,15 @@ namespace DotNetGraphQL.API
         
         static DogImagesModel GenerateMagicModel()
         {
-            var avatarUrl = "https://photos.app.goo.gl/DCQKJhmFJpaT95aw6";
+            var avatarUrl = "https://lh3.googleusercontent.com/8B2KQsTtG1nraAD8oE6N2wjNbK-EFEiZMOd3aJkg_Dqf_Wf34MRXjbs8VDIn8w7DTTmz16BbhIQ7hfE-5Xkuruj1lPVgOcZxY3hpGbn483jpnrmW-WfAcC5jg1wsFZ02-Pt5x7tUGCDbl7BfrH0zdaBaxOk3uyOs_zUKHExpSRb125oV7IgBhI9WYuyxSPbZsQVlBCh_NP-yb3B34vZx1IE5D4uHkc960c5V00C_AEllgX5rjMBEyRW9KhDt7gfmvYcssP6VwOH_WtY9gpyNaYihYCubRPtJDX_XnS6mOLMaI3n6i2f8dTo6hJEuCAP-wpybOXCwvBIq0QcmJJUorCH8_Z1-bocfwIZjDNfxVoQ9DC2_N2ZlWAT7eBVRnGSlAXTO4gpFZ9Pj2RYgWqmj1I98_3NWMPKMvlR_-DTAAKX4bkptZ86vsx1Z1e_62l7e7f-3XD9Eg8i_6AZzSOTEOvifOY9mZe8I_VXiYriAOujsIs3sdKeCDNuoLU91cVK9ZdnqJG_ppUkkEGC3V_oMTkE2gXvej6Dvl1vBrVXyoyT9jYjJVUzLZVj4kE9oltojy11ssvUzUs0_RZv_MS1h0Yp645NbyeKdNtDRgyoBPTGhsJj8eMtO_ljjmwqjndwv3M7Wm3Vwl7xfJdSLSmyaAYYauieu3uYbXBPRizLg0jkeWJ8ZvjaKQ2UlD4UqQWAukAtrbcgtsKqPgYCAFU8o6HGXS8bx4JLcZY5BG_8SZhcYlWyP=w989-h742-no";
             var websiteUrl = "";
             var name = "Magic";
 
             var photosList = new List<string>
             {
-                "https://photos.app.goo.gl/DCQKJhmFJpaT95aw6",
-                "https://photos.app.goo.gl/F5sTEonPk4YZAzmbA",
-                "https://photos.app.goo.gl/zQfWDXPecNLqFZ5WA",
-                "https://photos.app.goo.gl/wDmy1mDwUGwPXp937"
+                "https://lh3.googleusercontent.com/5tmTxxwo95s7a1XOCCoTtxcgyXpi4ZR20Y-GEwiQuAN9ODyCu9pwTcIfvY5_B4hHP7wnKN9RNh4X7quAA8vPIE87lO09Ox8PprvtIpynRwoAfN32mM_KIMqS_N00TB44_68LuNGYHXLJ5MpRyYMzDuAXXCfti719US2mA4RdDU-SvFJKhXhiwJOGK5iBtFbKTuiSrc4fc46NIYQfKn1mR70Z574H1NaZnE2WFh1JCyVpw6mH3yEz7wb5_SmKQ-qLwxA3vyJgGPk7lvad6sxT1DBWfBkIgNIwEWaF8TzHa56BN0YrT5VBOJgYgev0cnxuVsYV2-ig4yGXBl4-NDsYFcMxFmElFqh4d5z_FhMQrtMWUbOccv5758obWBZ2LuevTZP2u2Q8coUUSmbSE0yFAD4hniIqlINRmBuDoXy7ySt7amEYUIYBSmUGYkUxU8qeboUFSx-B8iAj6swsw3SiIjfKnVOar6zPTvCzxehzUH1CU_-isIaBxvd6n5wUzRr0_aIQ7TLENxu8F4ow_r0ma7wU5UE3-nL2EE76Dt09rBqWLwrDUFSkbtLGR8RUWuY3FBPhk1S4rdZApI7fgj-6ESsw44da9VDJBEi26eN8EeiIjjBBkV47uE8KxPWT3oApArJe5Ia_0bQWTjbIOHW1oPThvpTxDQ3siofRiK5cSWO2zboGvzU1nWxnsCsnyntpL0o5e8prscSM2YfTX-S4uBQ3EGJ_TDIH3bnFEPuueCCSBjHi=w989-h742-no",
+                "https://lh3.googleusercontent.com/ngayLnnbyDUp10Zf7C2ggJn15dvDQzHQwr5baBYTmI_SXinhLT5HwqraLIBh3wyqpAOdy5Twe96r2My08R9Kew03P074ymAfLF0Jp4BqikY14wn3_aMObPvOMyKTAxtVyqIxPg4AkKQPWAzE780Qk9dmHk46vImTM7rHby0nZLLLJQ2vL-Q7FzlPTVISQ2Scf6eY5pXZ3LNj79wYkzvAg06aFfRaYL2CFRlsWqEb_2C8ZlUNS_kckzHbWqtVJOAl-5tJFACGfVBySdwLUBPfu0Atw9DLPQ6EBuSFz1aVTZ1ynkyzRAqFrMrT_LAHUWFXGLfFJ4M0iKcJHjBtwxzye5O3rchRj3SQtJAO5b9EiwC3xhVUBPgZYd7X88pLt1wxXHUmSjFgVP0IkbyIbvsfIARWHqDflTnYvlPt8xCFirAfefEtQTXDn6cOoBjtWgsPd8PP3JIm1xy3PUNOVxKIzD5FrnLxfD5UkN_3m6u11RhDeytKrQJtC8wnE8955SpEKHzqcHy6l0rwx6XN-TddJjdQwixBrtugkPBQwwhNv_uErMMQhacEMvdIvv6lA6WqKbSEntN2WSqt9RI-0lucd3yFAc1pu_-zMX27jhYVRFR1QzEFFs7NWWMWyGF-25xviuNNnTk3-2_kchSTAIigf_NtRGGF36k8X81VDpmLBK7BGDgTHJjqLWWglSQcJBf_GREm32fRrCioP0ti9HUGQDGfcLwDZvoZ9qshh-m4eaNxa-0k=w716-h382-no",
+                "https://lh3.googleusercontent.com/KBRjG274i0Iq7-JAQTz_MgSsRfSBtcsGMkMqjWcL374x_Q41y6sBVamm4Vu27J4NYpVgLT4y8tDH3H8RsRWTclb2MCZCyLmEFZrFoOVa2otd8OvyoJxXzeBV6Wu7Z4F0RkXs9sYZtQsJxWjPJvEe9kymqiL1PnndDYEMirMpyfTfDHAp1uKBdxRbhmgoof28Yu_7OHVJKhGJQzEMPCliApKju8WfsSbmROdgs-cRuMfLddoVaN_r2HWEYMqcbsf_XK7LVSII4JmJ6RwBN9YUqRVqyco0n3Nx2aCPlVg47NAcrE3RCQB5okbFCTGGzn0Evjx5rF4DPPM14GXqUstoRvgc5g1omC-_7Wq7fl6SvIf7pnaUuNZ5INRTIsep-Pqqt6Lv2BZSYNeE4PhkkjjNk4CVz9YcTGxOjdWxd67CD2tYpD29TEN2C6soPO9R0IW3XIgWnV411ZCfAwg_f6k-XbeX8Ig1VJ_STJ0p1gM24Z-NlSSKthpoGls7sNuexstr4SY9FLvmQDT_AyShjLZ_2wS20RsFYG5YLhYLPGgStA6pKl5l2oCtFERM_gAyz_x5Twf68qUh50z8lELrD8s7s7UCKV3qGnjGCSuAYIbgjy_J-cVTOUYxkVLJOPwQ-eQGGSMr_IDFrnhIThZsA7_HfmN2w-ilUsL7iSPTB-jtueWX5C_egAF8w8f-e4aZ1xiYNmAPq-o8UVqRlQJUQBRdaQJGmRuxCfFpBWqeAgJygayQduSU=w509-h382-no"
             };
 
             var breed = "Golden Retriever";
@@ -197,16 +196,15 @@ namespace DotNetGraphQL.API
         
         static DogImagesModel GenerateHermesModel()
         {
-            var avatarUrl = "https://photos.app.goo.gl/GpgknJpTPRQN6pN68";
+            var avatarUrl = "https://lh3.googleusercontent.com/9kWTrt54igZZj2pEb0y7WVjvosu8PGmT2YFtLg9bTO_-U4NqKkdPZ2i15n2nRCWN-bmyOjFTC4sf0vtK7HqBxLzqzn1_JHn0nptex-GyA7KCfvI2Lli2i1Y5gMbrcaKU_dWTTFxPvcWZEKEiOfGkXYFk8DfWas3uvrGsjE2SQs2dRMndcSttu-SaUuNBDoQROq0IEgnpFx6MS0H5GxlZFCKyDll2CsJfBPYMp2iFBQbKcBNc45Z7UFJDyJx8DxuHT3JYUIabdCFqSKzPXt6ibnlGTs4GFsBA77RIKsivEF2kDT-HXoTGY9M4vxwzgt-6M9-UCjuL-QM_Rci0jyRh08WnpqlkF1MemXIu6kKc7pA-e0gOkVMsoODJ6E1d9Wl95v2bc4FrgJzibHrIyh7LoIKWgV9ImXRXd7i2ZVAiMekbJwRWQUDu9VgvMjBpSW1Qtn6T55_XvA1WZiYamZ33FbDyDzxzYNXwyOAap7U593CDY-b_h2_6IBhVX8tW0WRQgB2igzM7dXtWgIdf2wSfK-7UvWzX9bOfYplIVjXbzxWQF_VYjb6nItW9T7NFXNkx6aipdymb_Cgv-_jbSVfWLYESuMy490DIO_NIvSXqwcAz8r7NOTBvnSp0wYZugdH2v7KKT7v2KZ1_rFi7JTbMof4KFHkFlwQ23aI81VfDls4YRkrikyO1Uf6qUlzJXeOSrAi1BlZXrMcfZJyYmOCDfRUVofMxnTtUiB5Gi9oeswl8-4uX=w509-h382-no";
             var websiteUrl = "";
             var name = "Hermes";
 
             var photosList = new List<string>
             {
-                "https://photos.app.goo.gl/aS4csximmR8ipYE59",
-                "https://photos.app.goo.gl/MH5Xbe9T6tx4GCtE6",
-                "https://photos.app.goo.gl/2LV94s7nexSAjcoN6",
-                "https://photos.app.goo.gl/f9xpimwiffr8F9XUA"
+                "https://lh3.googleusercontent.com/Dj9eGzTuwvkpGtoS3YlHU4UHrtE1s3cyYmkWIbIzktU0OkxT21rveMJTf8P5lm3bI-qOidbPxZgRvt2BqjzxBL5yYUcKuJTBQxt7GoqpPTWSmc0kLAGKCAgsm7o7GRp-E1gnaOTYTliFilkcUy1S9X_Q6jXA_VuhVYj04mm41ofEE00FUzYz3FqAoUPHie7nyVfkow3qyQVHoGW7CSAHk0Ock6cXGKP9rJpcp-1FNlABRmeMNUrCBU70Sg5m5wHLeKiMOZLOyUILydD4yfKPWK29jo8zJoaNYV2KAWzhU0mA_scuRcbQ5eYCLdJGoBN9o0lZdDCc0tu84KpSDF7K_FWSh1FkModIE-oz_MkGqngiQrVgU9NXq-XHwTI4J1SNjt7wOitaq7s1Bat9P6T6_5ifPToypak8B-RI3NGU82UDOB4MnmplvQk7773eDH4O097wd-AvoDVQkSroaBGR0GMH1WKcC8horuKP_I0AbaOf4Fqk8d1MqaM3dQPPRMusVhghvwsSAYcr51Xt7INqZtxa0xANCC6SOcG6AMOk7H-W_iDWAbsC8ZGhtV6SPnPKPsGFUic07UpPGxq7a5djTQPSj1-7UjFsWICrMGcropksRQFp8ptsSmndiRRWzYhhasxZCdWUo1wEegaCCu8jXYUvXyYxwP1_zji74tOf9yspoCm3oIOb0nQrHOMe83KtxaPwE4z_0icKr7qJzkBSB3o3LaeLL7NnvfK5TIn0aUFJ3A4c=w509-h382-no",
+                "https://lh3.googleusercontent.com/Q1jGh32k1Lq4wrAq0LWinVJforrWcPcCIcbDEnbdQ-7hBiKWckPoCB6OLSGEsCpIi1YKj_M7SsHf84ygReXTS89_azsLXS4C6Ijs7IhD6umSqHPhICZj5wavZS-RnsXTZMX-iZb7Ebgkh7yC0pV1Bp5ghUW48EFervfv6E4gs_kNywdQpCwCl6CGTT1FywebKTChzihjdhoxtCEy4oxsPXFRSVg34vOYhJtU5cEBJZ6nwbW-elZ5iq3D4pgNlX4ey2EJtXRedcxVuyBW78FgjrGjix000_PGd2TkaOBs5wNGLYerdUdNSCexT05jZ-aD0_JIy10rqq4ffsIhV585Euf3S5sUYVYYa62dwnjWtDLesR8G1MuNwZdThQmxnxkU5E2jHPfKXKkBpDsPsoUyqUAxTYdEL7qF1bqLRi-td_ahycwBivK3EeMoNxiC74EOQo5DbdahqWqqOnX4qyFxEjfGs36fV483FoeOvps9NyaCxb_ag9tdZAbOuTS6ChQs0s8ZpCmTzzNti-Zw33fuc7CWLTmTGku-9byXZNsCjUIsp-oZVmHoqMmgSvffnQqjvOecNdwHYIbtXZzfzhRCTVGxgDMaQSPp48cguoBAe7geawwUqCy-0U0vVSvH-4HFCIF8p2Y6UfzKo3Vhakwrp0b5fIG77xNDvJW-GfhG_Gk_zKK62czlTFQ_4LCL1xD50VF_mvryfHWou0_vo8xeK2BP_2JkuRvzQ5ZVWhVbDAxtUjxP=w509-h382-no",
+                "https://lh3.googleusercontent.com/Htsg5lZJOfX0f8rKOwfbqU89ZJQslf8DWYiam0dHsMxb3-hq023Wcf03FCfXfDE-jSWbKr44SIdb9eoVSUloPlAH3XKg1aCPfCLFPweyBm3LLft1L3LtMj3UYQd7zlpHh6kLyp6EoxnOU_n1qe12wF1JjxCFtxw0GTu8wxJqnXIU_vz9LMbI8ggfm4tw-miNoizBGxFzrkrklK0lxWayhEpswUl9KaQa2YTWRTnVGLl00AdjpStHMkvUL3jE8B6zbCxZASr7I3DeHpGOyl0nE0OPK_PxwRblvUyT45PEYLBi4pYaxWOxI-gLEdYh7X025JLMzfJW-k7fmYtQWORLR1Vx38E-yga9WA_DAhtw_M2GnbK_ZXfuFD_cNlV1qaOdEg9rbnAiHsZGulu4EfuN03P4JyK30fQI4au5cjdVZKhhq3ln67fKShPWoHKFCSyCfSzJ7fhFS3Vj3jRIp06kG0RKPyBDnTSaNphPvKNQqpSTKJIRZZy_Ll_b1SxNg0HZ216CBzzZ4JCrlX11C_FNs50zAH-gPxwslTs1KgP397WmwAvqRtnDBueyJzauCz-yxU-NCzEdYDzDa6-SnGSDdeAD3lctilopRvogJ7sGOKkvuyjVl4XDs9RV3JjbpINHSLZIZ49MzBNlWGmyOlr7aSTzMAKLpU_fRhkwdODPt_5EuQ8CpqnT2rDJjIl9p9NjPB44hUcotUvXrlDIDYIdAyPHvr9wJehRfadyOf2-Ih9dE4t5=w287-h382-no"
             };
 
             var breed = "Shorkie";

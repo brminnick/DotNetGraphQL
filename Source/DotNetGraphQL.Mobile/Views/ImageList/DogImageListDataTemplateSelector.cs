@@ -26,6 +26,7 @@ namespace DotNetGraphQL.Mobile
                     HeightRequest = circleImageHeight,
                     HorizontalOptions = LayoutOptions.Start,
                     VerticalOptions = LayoutOptions.Center,
+                    Aspect = Aspect.AspectFill
                 };
 
                 var dogNameTitleLabel = new DarkBlueLabel

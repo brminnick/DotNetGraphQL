@@ -7,8 +7,6 @@ namespace DotNetGraphQL.Mobile
 {
     class DogImageListPage : BaseContentPage<DogImageListViewModel>
     {
-        readonly RefreshView _refreshView;
-
         public DogImageListPage()
         {
             ViewModel.PullToRefreshFailed += HandlePullToRefreshFailed;
@@ -30,17 +28,17 @@ namespace DotNetGraphQL.Mobile
             collectionView.SelectionChanged += HandleCollectionViewCollectionChanged;
             collectionView.SetBinding(CollectionView.ItemsSourceProperty, nameof(DogImageListViewModel.DogImageCollection));
 
-            _refreshView = new RefreshView
+            var refreshView = new RefreshView
             {
                 Content = collectionView,
                 RefreshColor = Color.FromHex("1F2B2E")
             };
-            _refreshView.SetBinding(RefreshView.IsRefreshingProperty, nameof(DogImageListViewModel.IsDogImageCollectionRefreshing));
-            _refreshView.SetBinding(RefreshView.CommandProperty, nameof(DogImageListViewModel.RefreshDogCollectionCommand));
+            refreshView.SetBinding(RefreshView.IsRefreshingProperty, nameof(DogImageListViewModel.IsDogImageCollectionRefreshing));
+            refreshView.SetBinding(RefreshView.CommandProperty, nameof(DogImageListViewModel.RefreshDogCollectionCommand));
 
             Title = "Favorite Dogs";
 
-            Content = _refreshView;
+            Content = refreshView;
         }
 
         void HandlePullToRefreshFailed(object sender, string e) =>
