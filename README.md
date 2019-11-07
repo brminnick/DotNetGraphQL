@@ -6,7 +6,9 @@ If you're new to GraphQL, check out these videos featured in the [Learn More](#l
 
 To run this sample, follow the [Getting Started Instructions, below](#getting-started).
 
-This app was featured at [GraphQL Summit 2019](https://codetraveler.io/GraphQLSummit-DotNet).
+This app was featured at [GraphQL Summit 2019](https://codetraveler.io/GraphQLSummit-DotNet). 
+
+
 
 ### GraphQL Backend
 The GraphQL backend is created in C# using the [GraphQL NuGet Package](https://www.nuget.org/packages/GraphQL/).
@@ -96,9 +98,17 @@ Learn more about Xamarin + GraphQL
 
 ## Video Recordings
 
+### Consuming GraphQL in C#
+
+This session on GraphQL + C# was delivered at [GraphQL Summit 2019](https://codetraveler.io/GraphQLSummit-DotNet)
+
+https://www.youtube.com/watch?v=kEWov9JHCjk&list=PLpi1lPB6opQyraZSmwFre_FpL00_3nTzV&index=37&t=0s
+
 ### Xamarin + GraphQL
 
-The session on Xamarin + GraphQL was delivered at [Xamarin Developer Summit 2019](https://www.codetraveler.io/xamdevsummit-graphql/) and its recording is available on YouTube: https://youtu.be/t1cQsenAmNo?t=18575
+The session on Xamarin + GraphQL was delivered at [Xamarin Developer Summit 2019](https://www.codetraveler.io/xamdevsummit-graphql/). It demonstrates how to create a GraphQL Backend in C# and connect it to a client-side mobile app written in C# using Xamarin.
+
+[![Consuming GraphQL in C#](https://user-images.githubusercontent.com/13558917/68418928-17682700-014e-11ea-9aa6-749254cb50fe.png)](https://youtu.be/t1cQsenAmNo?t=18575)
 
 [![Xamarin + GraphQL Video](https://user-images.githubusercontent.com/13558917/61256668-6a8f1780-a722-11e9-97ad-8188ec6eab8f.png)](https://channel9.msdn.com/Events/Xamarin/Xamarin-Developer-Summit-2019/XamarinGraphQL?WT.mc_id=DotNetGraphQL-github-bramin)
 
