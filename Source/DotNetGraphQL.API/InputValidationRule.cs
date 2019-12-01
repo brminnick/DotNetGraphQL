@@ -1,14 +1,10 @@
+using System.Threading.Tasks;
 using GraphQL.Validation;
 
 namespace DotNetGraphQL.Common
 {
     public class InputValidationRule : IValidationRule
     {
-        public INodeVisitor Validate(ValidationContext context)
-        {
-            return new EnterLeaveListener(_ =>
-            {
-            });
-        }
+        public Task<INodeVisitor> ValidateAsync(ValidationContext context) => Task.FromResult<INodeVisitor>(new EnterLeaveListener());
     }
 }

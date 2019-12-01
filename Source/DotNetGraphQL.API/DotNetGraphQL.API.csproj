@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
-        <LangVersion>8.0</LangVersion>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
         <Nullable>Enable</Nullable>
         <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="GraphQL" Version="3.0.0-preview-1271" />
+        <PackageReference Include="GraphQL" Version="3.0.0-preview-1352" />
         <PackageReference Include="GraphQL.Common" Version="2.0.0-alpha.3" />
-        <PackageReference Include="Microsoft.AspNetCore.App">
-          <PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
-          <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
-        </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\DotNetGraphQL.Common\DotNetGraphQL.Common.csproj">

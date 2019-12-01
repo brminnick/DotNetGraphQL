@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using AsyncAwaitBestPractices;
 using AsyncAwaitBestPractices.MVVM;
@@ -27,7 +26,7 @@ namespace DotNetGraphQL.Mobile
         }
 
         public ObservableCollection<DogImagesModel> DogImageCollection { get; } = new ObservableCollection<DogImagesModel>();
-        public AsyncCommand RefreshDogCollectionCommand { get; }
+        public IAsyncCommand RefreshDogCollectionCommand { get; }
 
         public bool IsDogImageCollectionRefreshing
         {

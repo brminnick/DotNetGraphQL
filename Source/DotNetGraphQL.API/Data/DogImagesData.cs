@@ -6,22 +6,22 @@ namespace DotNetGraphQL.API
 {
     public static class DogImagesData
     {
-        readonly static Lazy<List<DogImagesModel>> _dogImagesHolder = new Lazy<List<DogImagesModel>>(CreateDogImageList);
+        readonly static Lazy<IEnumerable<DogImagesModel>> _dogImagesHolder = new Lazy<IEnumerable<DogImagesModel>>(CreateDogImageList);
 
-        public static List<DogImagesModel> DogImages => _dogImagesHolder.Value;
+        public static IEnumerable<DogImagesModel> DogImages => _dogImagesHolder.Value;
 
-        static List<DogImagesModel> CreateDogImageList() => new List<DogImagesModel>
+        static IEnumerable<DogImagesModel> CreateDogImageList()
         {
-            GenerateKirbyModel(),
-            GenerateWafflesModel(),
-            GenerateWhiskeyModel(),
-            GenerateTobyModel(),
-            GenerateMozzieModel(),
-            GenerateMiloModel(),
-            GeneratePiperModel(),
-            GenerateMagicModel(),
-            GenerateHermesModel()
-        };
+            yield return GenerateKirbyModel();
+            yield return GenerateWafflesModel();
+            yield return GenerateWhiskeyModel();
+            yield return GenerateTobyModel();
+            yield return GenerateMozzieModel();
+            yield return GenerateMiloModel();
+            yield return GeneratePiperModel();
+            yield return GenerateMagicModel();
+            yield return GenerateHermesModel();
+        }
 
         static DogImagesModel GenerateKirbyModel()
         {
@@ -57,7 +57,7 @@ namespace DotNetGraphQL.API
                 "https://scontent-sjc3-1.cdninstagram.com/vp/463d2f790dad456aa7f907fbc5c4f2d5/5E5E4DA2/t51.2885-15/e35/p1080x1080/68904319_153662302373174_5867607915252717949_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=102",
                 "https://scontent-sjc3-1.cdninstagram.com/vp/6f094e68dcea3ce76025bc9a3aae1d10/5E4B5760/t51.2885-15/e35/p1080x1080/61615381_142948983481771_3906781618639463667_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=107",
                 "https://scontent-sjc3-1.cdninstagram.com/vp/df20cab484e3fdce8e7b93be068cd955/5E5F68F4/t51.2885-15/e35/p1080x1080/60983676_671182750019423_8627416967785409822_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=111",
-                "https://scontent-sjc3-1.cdninstagram.com/vp/4a5977fc6da543a3580dc65bec020f72/5E420BE3/t51.2885-15/e35/p1080x1080/60306434_315395119395230_9143171722741474046_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=102",
+                "https://scontent-sjc3-1.cdninstagram.com/vp/4a5977fc6da543a3580dc65bec020f72/5E420BE3/t51.2885-15/e35/p1080x1080/60306434_315395119395230_9143171722741474046_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=102"
             };
 
             var breed = "Australian Labradoodle";
@@ -69,7 +69,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateWhiskeyModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/dec8edaafd32ef4f16ce77c2b65eea32/5E62D3AA/t51.2885-19/s320x320/67436293_862189824165677_126933068328992768_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com";
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/d0cc41e4c2f2fad7e41ed5f9462421f4/5E6FDB22/t51.2885-19/s320x320/75487930_545788479570130_7341431923115294720_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com";
             var websiteUrl = "https://www.whiskeythegoldendoodle.com/";
             var name = "Whiskey";
 
@@ -173,7 +173,7 @@ namespace DotNetGraphQL.API
 
             return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor);
         }
-        
+
         static DogImagesModel GenerateMagicModel()
         {
             var avatarUrl = "https://lh3.googleusercontent.com/8B2KQsTtG1nraAD8oE6N2wjNbK-EFEiZMOd3aJkg_Dqf_Wf34MRXjbs8VDIn8w7DTTmz16BbhIQ7hfE-5Xkuruj1lPVgOcZxY3hpGbn483jpnrmW-WfAcC5jg1wsFZ02-Pt5x7tUGCDbl7BfrH0zdaBaxOk3uyOs_zUKHExpSRb125oV7IgBhI9WYuyxSPbZsQVlBCh_NP-yb3B34vZx1IE5D4uHkc960c5V00C_AEllgX5rjMBEyRW9KhDt7gfmvYcssP6VwOH_WtY9gpyNaYihYCubRPtJDX_XnS6mOLMaI3n6i2f8dTo6hJEuCAP-wpybOXCwvBIq0QcmJJUorCH8_Z1-bocfwIZjDNfxVoQ9DC2_N2ZlWAT7eBVRnGSlAXTO4gpFZ9Pj2RYgWqmj1I98_3NWMPKMvlR_-DTAAKX4bkptZ86vsx1Z1e_62l7e7f-3XD9Eg8i_6AZzSOTEOvifOY9mZe8I_VXiYriAOujsIs3sdKeCDNuoLU91cVK9ZdnqJG_ppUkkEGC3V_oMTkE2gXvej6Dvl1vBrVXyoyT9jYjJVUzLZVj4kE9oltojy11ssvUzUs0_RZv_MS1h0Yp645NbyeKdNtDRgyoBPTGhsJj8eMtO_ljjmwqjndwv3M7Wm3Vwl7xfJdSLSmyaAYYauieu3uYbXBPRizLg0jkeWJ8ZvjaKQ2UlD4UqQWAukAtrbcgtsKqPgYCAFU8o6HGXS8bx4JLcZY5BG_8SZhcYlWyP=w989-h742-no";
@@ -193,7 +193,7 @@ namespace DotNetGraphQL.API
 
             return new DogImagesModel(avatarUrl, websiteUrl, name, photosList, breed, coatColor, birthDate);
         }
-        
+
         static DogImagesModel GenerateHermesModel()
         {
             var avatarUrl = "https://lh3.googleusercontent.com/9kWTrt54igZZj2pEb0y7WVjvosu8PGmT2YFtLg9bTO_-U4NqKkdPZ2i15n2nRCWN-bmyOjFTC4sf0vtK7HqBxLzqzn1_JHn0nptex-GyA7KCfvI2Lli2i1Y5gMbrcaKU_dWTTFxPvcWZEKEiOfGkXYFk8DfWas3uvrGsjE2SQs2dRMndcSttu-SaUuNBDoQROq0IEgnpFx6MS0H5GxlZFCKyDll2CsJfBPYMp2iFBQbKcBNc45Z7UFJDyJx8DxuHT3JYUIabdCFqSKzPXt6ibnlGTs4GFsBA77RIKsivEF2kDT-HXoTGY9M4vxwzgt-6M9-UCjuL-QM_Rci0jyRh08WnpqlkF1MemXIu6kKc7pA-e0gOkVMsoODJ6E1d9Wl95v2bc4FrgJzibHrIyh7LoIKWgV9ImXRXd7i2ZVAiMekbJwRWQUDu9VgvMjBpSW1Qtn6T55_XvA1WZiYamZ33FbDyDzxzYNXwyOAap7U593CDY-b_h2_6IBhVX8tW0WRQgB2igzM7dXtWgIdf2wSfK-7UvWzX9bOfYplIVjXbzxWQF_VYjb6nItW9T7NFXNkx6aipdymb_Cgv-_jbSVfWLYESuMy490DIO_NIvSXqwcAz8r7NOTBvnSp0wYZugdH2v7KKT7v2KZ1_rFi7JTbMof4KFHkFlwQ23aI81VfDls4YRkrikyO1Uf6qUlzJXeOSrAi1BlZXrMcfZJyYmOCDfRUVofMxnTtUiB5Gi9oeswl8-4uX=w509-h382-no";

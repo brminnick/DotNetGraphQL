@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -31,8 +32,10 @@ namespace DotNetGraphQL.API
 
         public Task Invoke(HttpContext context, ISchema schema)
         {
-            if (IsGraphQLRequest(context))
-                return ExecuteAsync(context, schema);
+            var (isGraphQLRequest, request) = IsGraphQLRequest(context);
+
+            if (isGraphQLRequest && request is GraphQLRequest)
+                return ExecuteAsync(context, schema, request);
 
             return _next(context);
         }
@@ -45,16 +48,21 @@ namespace DotNetGraphQL.API
             return Serializer.Deserialize<T>(jsonTextReader);
         }
 
-        bool IsGraphQLRequest(HttpContext context)
+        (bool isGraphQLRequest, GraphQLRequest? request) IsGraphQLRequest(HttpContext context)
         {
-            return context.Request.Path.StartsWithSegments(_settings.Path)
-                && context.Request.Method.Equals("POST", StringComparison.OrdinalIgnoreCase);
+            try
+            {
+                return (context.Request.Path.StartsWithSegments(_settings.Path) && context.Request.Method.Equals("POST", StringComparison.OrdinalIgnoreCase),
+                            Deserialize<GraphQLRequest>(context.Request.Body));
+            }
+            catch
+            {
+                return (false, null);
+            }
         }
 
-        async Task ExecuteAsync(HttpContext context, ISchema schema)
+        async Task ExecuteAsync(HttpContext context, ISchema schema, GraphQLRequest request)
         {
-            var request = Deserialize<GraphQLRequest>(context.Request.Body);
-
             var result = await _executer.ExecuteAsync(options =>
             {
                 options.Schema = schema;
