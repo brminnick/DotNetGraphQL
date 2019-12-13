@@ -48,7 +48,7 @@ namespace DotNetGraphQL.API
             return Serializer.Deserialize<T>(jsonTextReader);
         }
 
-        (bool isGraphQLRequest, GraphQLRequest? request) IsGraphQLRequest(HttpContext context)
+        (bool isGraphQLRequest, GraphQLRequest? request) IsGraphQLRequest(in HttpContext context)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace DotNetGraphQL.API
             await WriteResponseAsync(context, result).ConfigureAwait(false);
         }
 
-        Task WriteResponseAsync(HttpContext context, ExecutionResult result)
+        Task WriteResponseAsync(in HttpContext context, in ExecutionResult result)
         {
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = result.Errors?.Any() is true ? (int)HttpStatusCode.BadRequest : (int)HttpStatusCode.OK;

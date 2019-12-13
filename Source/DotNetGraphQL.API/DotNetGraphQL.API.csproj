@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <Nullable>Enable</Nullable>
         <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>

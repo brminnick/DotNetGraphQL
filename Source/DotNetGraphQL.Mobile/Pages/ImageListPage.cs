@@ -40,8 +40,8 @@ namespace DotNetGraphQL.Mobile
             Content = refreshView;
         }
 
-        void HandlePullToRefreshFailed(object sender, string e) =>
-            Device.BeginInvokeOnMainThread(() => DisplayAlert("Refresh Failed", e, "OK"));
+        void HandlePullToRefreshFailed(object sender, string message) =>
+            Device.BeginInvokeOnMainThread(async () => await DisplayAlert("Refresh Failed", message, "OK"));
 
         async void HandleCollectionViewCollectionChanged(object sender, SelectionChangedEventArgs e)
         {
