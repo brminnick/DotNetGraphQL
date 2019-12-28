@@ -1,13 +1,10 @@
-using GraphQL;
-using GraphQL.Http;
-using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using HotChocolate;
+using HotChocolate.AspNetCore;
 
 namespace DotNetGraphQL.API
 {
@@ -15,19 +12,16 @@ namespace DotNetGraphQL.API
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<KestrelServerOptions>(options => options.AllowSynchronousIO = true);
+            services.AddGraphQL(
+                SchemaBuilder.New()
+                    .AddQueryType<Query>());
 
-            services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
-            services.AddSingleton<IDocumentWriter, DocumentWriter>();
-
-            services.AddSingleton<ISchema, ImagesSchema>();
-
-            services.AddCors(options =>
-                                options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
-                                .AllowAnyMethod()
-                                .AllowAnyHeader()));
+            services.AddCors(options => options
+                .AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()));
             services.AddLogging(builder => builder.AddConsole());
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
@@ -37,7 +31,7 @@ namespace DotNetGraphQL.API
 
             app.UseCors("AllowAll");
 
-            app.UseMiddleware<GraphQLMiddleware>(new GraphQLSettings(true, ctx => new GraphQLUserContext(ctx.User)));
+            app.UseGraphQL();
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
