@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using HotChocolate;
 using HotChocolate.AspNetCore;
+using HotChocolate.AspNetCore.Voyager;
 
 namespace DotNetGraphQL.API
 {
@@ -32,9 +33,8 @@ namespace DotNetGraphQL.API
             app.UseCors("AllowAll");
 
             app.UseGraphQL();
-
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
+            app.UsePlayground();
+            app.UseVoyager();
         }
     }
 }
