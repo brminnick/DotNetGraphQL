@@ -3,7 +3,6 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using AsyncAwaitBestPractices;
 using AsyncAwaitBestPractices.MVVM;
-using DotNetGraphQL.Common;
 using Xamarin.Forms;
 
 namespace DotNetGraphQL.Mobile
@@ -25,7 +24,7 @@ namespace DotNetGraphQL.Mobile
             remove => _pullToRefreshFailedEventManager.RemoveEventHandler(value);
         }
 
-        public ObservableCollection<DogImagesModel> DogImageCollection { get; } = new ObservableCollection<DogImagesModel>();
+        public ObservableCollection<IDogImage> DogImageCollection { get; } = new ObservableCollection<IDogImage>();
         public IAsyncCommand RefreshDogCollectionCommand { get; }
 
         public bool IsDogImageCollectionRefreshing
@@ -40,7 +39,7 @@ namespace DotNetGraphQL.Mobile
 
             try
             {
-                await foreach(var dogImageModel in GraphQLService.GetDogImages())
+                await foreach(var dogImageModel in GraphQLClient.GetAllDogsAsync())
                 {
                     DogImageCollection.Add(dogImageModel);
                 }

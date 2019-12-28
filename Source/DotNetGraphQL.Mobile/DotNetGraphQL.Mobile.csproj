@@ -4,6 +4,7 @@
         <TargetFramework>netstandard2.1</TargetFramework>
         <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
         <Nullable>Enable</Nullable>
+        <LangVersion>8.0</LangVersion>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
@@ -12,11 +13,9 @@
         <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
         <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
         <PackageReference Include="modernhttpclient-updated" Version="3.4.3" />
-        <PackageReference Include="GraphQL.Client" Version="2.0.0-alpha.3" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="3.0.0" />
+        <PackageReference Include="StrawberryShake" Version="11.0.0-preview.73" />
         <PackageReference Include="Polly" Version="7.2.0" />
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\DotNetGraphQL.Common\DotNetGraphQL.Common.csproj" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Pages\" />

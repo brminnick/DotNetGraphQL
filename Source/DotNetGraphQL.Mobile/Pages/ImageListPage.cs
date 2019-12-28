@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using DotNetGraphQL.Common;
 using Xamarin.Forms;
 
 namespace DotNetGraphQL.Mobile
@@ -48,7 +47,7 @@ namespace DotNetGraphQL.Mobile
             var collectionView = (CollectionView)sender;
             collectionView.SelectedItem = null;
 
-            if (e.CurrentSelection.FirstOrDefault() is DogImagesModel dogImagesModel)
+            if (e.CurrentSelection.FirstOrDefault() is IDogImage dogImagesModel)
             {
                 //ToDo Navigate to Dog Images page
                 await OpenBrowser(dogImagesModel.WebsiteUrl);

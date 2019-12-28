@@ -1,0 +1,99 @@
+schema {
+  query: Query
+}
+
+type Query {
+  dog(name: String!): DogImagesModel!
+  dogs(order_by: DogImagesModelSort where: DogImagesModelFilter): [DogImagesModel!]!
+  dogsByCoatColorOrBreed(breed: String! coatColor: String!): [DogImagesModel!]!
+}
+
+input DogImagesModelFilter {
+  AND: [DogImagesModelFilter!]
+  avatarUrl: String
+  avatarUrl_contains: String
+  avatarUrl_ends_with: String
+  avatarUrl_in: [String!]
+  avatarUrl_not: String
+  avatarUrl_not_contains: String
+  avatarUrl_not_ends_with: String
+  avatarUrl_not_in: [String!]
+  avatarUrl_not_starts_with: String
+  avatarUrl_starts_with: String
+  birthDate: DateTime
+  birthDate_gt: DateTime
+  birthDate_gte: DateTime
+  birthDate_in: [DateTime]
+  birthDate_lt: DateTime
+  birthDate_lte: DateTime
+  birthDate_not: DateTime
+  birthDate_not_gt: DateTime
+  birthDate_not_gte: DateTime
+  birthDate_not_in: [DateTime]
+  birthDate_not_lt: DateTime
+  birthDate_not_lte: DateTime
+  breed: String
+  breed_contains: String
+  breed_ends_with: String
+  breed_in: [String!]
+  breed_not: String
+  breed_not_contains: String
+  breed_not_ends_with: String
+  breed_not_in: [String!]
+  breed_not_starts_with: String
+  breed_starts_with: String
+  coatColor: String
+  coatColor_contains: String
+  coatColor_ends_with: String
+  coatColor_in: [String!]
+  coatColor_not: String
+  coatColor_not_contains: String
+  coatColor_not_ends_with: String
+  coatColor_not_in: [String!]
+  coatColor_not_starts_with: String
+  coatColor_starts_with: String
+  OR: [DogImagesModelFilter!]
+  title: String
+  title_contains: String
+  title_ends_with: String
+  title_in: [String!]
+  title_not: String
+  title_not_contains: String
+  title_not_ends_with: String
+  title_not_in: [String!]
+  title_not_starts_with: String
+  title_starts_with: String
+  websiteUrl: String
+  websiteUrl_contains: String
+  websiteUrl_ends_with: String
+  websiteUrl_in: [String!]
+  websiteUrl_not: String
+  websiteUrl_not_contains: String
+  websiteUrl_not_ends_with: String
+  websiteUrl_not_in: [String!]
+  websiteUrl_not_starts_with: String
+  websiteUrl_starts_with: String
+}
+
+input DogImagesModelSort {
+  avatarUrl: SortOperationKind
+  breed: SortOperationKind
+  coatColor: SortOperationKind
+  title: SortOperationKind
+  websiteUrl: SortOperationKind
+}
+
+enum SortOperationKind {
+  ASC
+  DESC
+}
+
+type DogImagesModel {
+  avatarUrl: String!
+  birthDate: DateTime
+  breed: String!
+  coatColor: String!
+  imagesList: [String!]!
+  title: String!
+  websiteUrl: String!
+}

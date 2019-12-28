@@ -1,0 +1,21 @@
+query getAllDogs {
+  dogs {
+    ...DogImage
+  }
+}
+
+query getDogsByCoatColor($coatColor: String!) {
+  dogs(where: { coatColor_contains: $coatColor }) {
+    ...DogImage
+  }
+}
+
+fragment DogImage on DogImagesModel {
+  avatarUrl
+  birthDate
+  breed
+  coatColor
+  imagesList
+  title
+  websiteUrl
+}

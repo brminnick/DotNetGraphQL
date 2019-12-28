@@ -1,20 +1,19 @@
-﻿using DotNetGraphQL.Common;
-using ImageCircle.Forms.Plugin.Abstractions;
+﻿using ImageCircle.Forms.Plugin.Abstractions;
 using Xamarin.Forms;
 
 namespace DotNetGraphQL.Mobile
 {
     class DogImageListDataTemplateSelector : DataTemplateSelector
     {
-        protected override DataTemplate OnSelectTemplate(object item, BindableObject container) => new DogImageListDataTemplate((DogImagesModel)item);
+        protected override DataTemplate OnSelectTemplate(object item, BindableObject container) => new DogImageListDataTemplate((IDogImage)item);
 
         class DogImageListDataTemplate : DataTemplate
         {
-            public DogImageListDataTemplate(DogImagesModel dogImagesModel) : base(() => CreateImageLayout(dogImagesModel))
+            public DogImageListDataTemplate(IDogImage dogImagesModel) : base(() => CreateImageLayout(dogImagesModel))
             {
             }
 
-            static Layout CreateImageLayout(DogImagesModel dogImagesModel)
+            static Layout CreateImageLayout(IDogImage dogImagesModel)
             {
                 const int circleImageHeight = 90;
                 const int fontSize = 16;
@@ -23,6 +22,7 @@ namespace DotNetGraphQL.Mobile
                 var avatarImage = new CircleImage
                 {
                     Source = dogImagesModel.AvatarUrl,
+
                     HeightRequest = circleImageHeight,
                     HorizontalOptions = LayoutOptions.Start,
                     VerticalOptions = LayoutOptions.Center,

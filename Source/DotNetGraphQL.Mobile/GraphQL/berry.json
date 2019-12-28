@@ -1,0 +1,1 @@
+{"Schemas":[{"Name":"Dogs","Type":"http","File":"Dogs.graphql","Url":"http://localhost:5000/"}],"ClientName":"DogsClient"}
