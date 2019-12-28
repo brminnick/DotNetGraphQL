@@ -35,7 +35,7 @@ namespace DotNetGraphQL.Mobile
         private static IDogsClient Create()
         {
             var services = new ServiceCollection();
-            services.AddHttpClient("DogsClient", c => c.BaseAddress = new Uri("http://localhost:5000"));
+            services.AddHttpClient("DogsClient", c => c.BaseAddress = new Uri(BackendConstants.GraphQLApiUrl));
             services.AddDogsClient();
             return services.BuildServiceProvider().GetRequiredService<IDogsClient>();
         }
