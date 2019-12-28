@@ -22,7 +22,6 @@
       <Folder Include="ViewModels\" />
       <Folder Include="Views\" />
       <Folder Include="Views\ImageList\" />
-      <Folder Include="Services\" />
       <Folder Include="Constants\" />
       <Folder Include="Pages\Base\" />
     </ItemGroup>
