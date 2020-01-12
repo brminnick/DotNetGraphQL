@@ -40,7 +40,7 @@ namespace DotNetGraphQL.Mobile
 
             try
             {
-                await foreach(var dogImageModel in GraphQLService.GetDogImages())
+                await foreach(var dogImageModel in GraphQLService.GetDogImages().ConfigureAwait(false))
                 {
                     DogImageCollection.Add(dogImageModel);
                 }
