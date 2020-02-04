@@ -5,6 +5,14 @@ namespace DotNetGraphQL.Common
 {
     public abstract class ImagesModel
     {
+        protected ImagesModel(string avatarUrl, string websiteUrl, string title, IEnumerable<string> imagesList) =>
+            (AvatarUrl, WebsiteUrl, Title, ImagesList) = (avatarUrl, websiteUrl, title, imagesList.ToList());
+
+        protected ImagesModel()
+        {
+
+        }
+
         public string AvatarUrl { get; set; } = string.Empty;
         public string WebsiteUrl { get; set; } = string.Empty;
         public string Title { get; set; } = string.Empty;
