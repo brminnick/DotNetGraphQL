@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DotNetGraphQL.Common;
+using GraphQL;
 using GraphQL.Types;
 
 namespace DotNetGraphQL.API
@@ -15,7 +16,7 @@ namespace DotNetGraphQL.API
             Field<ListGraphType<DogImagesGraphType>>("dogs", "Query for dogs", resolve: context => DogImagesData.DogImages);
             Field<DogImagesGraphType>("dog", "Query a specific dog",
                     new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "name", Description = "Dog Name" }),
-                    context => DogImagesData.DogImages.Single(x => x.Title.Equals(context.GetArgument<string>("name"), StringComparison.OrdinalIgnoreCase)));
+                    context => DogImagesData.DogImages.Single(x => x.Title.Equals(context.Arguments["name"].GetPropertyValue<string>(), StringComparison.OrdinalIgnoreCase)));
             Field<ListGraphType<DogImagesGraphType>>("dogsByCoatColorOrBreed", "Query dogs by coat color or breed",
                     new QueryArguments(
                         new QueryArgument<StringGraphType> { Name = "coatColor", Description = "Dog Coat Color" },

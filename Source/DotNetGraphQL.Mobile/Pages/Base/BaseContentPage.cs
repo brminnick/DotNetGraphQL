@@ -31,8 +31,8 @@ namespace DotNetGraphQL.Mobile
             static bool IsNullOrEmpty(in IEnumerable? enumerable) => !enumerable?.GetEnumerator().MoveNext() ?? true;
         }
 
-        protected Task OpenBrowser(Uri uri) => Device.InvokeOnMainThreadAsync(() => Browser.OpenAsync(uri));
+        protected Task OpenBrowser(Uri uri) => MainThread.InvokeOnMainThreadAsync(() => Browser.OpenAsync(uri));
 
-        protected Task OpenBrowser(string url) => Device.InvokeOnMainThreadAsync(() => Browser.OpenAsync(url));
+        protected Task OpenBrowser(string url) => MainThread.InvokeOnMainThreadAsync(() => Browser.OpenAsync(url));
     }
 }

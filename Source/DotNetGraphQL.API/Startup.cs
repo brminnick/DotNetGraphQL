@@ -1,5 +1,4 @@
 using GraphQL;
-using GraphQL.Http;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,7 +17,7 @@ namespace DotNetGraphQL.API
             services.Configure<KestrelServerOptions>(options => options.AllowSynchronousIO = true);
 
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
-            services.AddSingleton<IDocumentWriter, DocumentWriter>();
+            services.AddSingleton<IDocumentWriter, GraphQL.NewtonsoftJson.DocumentWriter>();
 
             services.AddSingleton<ISchema, ImagesSchema>();
 

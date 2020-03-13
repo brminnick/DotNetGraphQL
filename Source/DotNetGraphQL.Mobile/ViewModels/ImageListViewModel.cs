@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AsyncAwaitBestPractices;
 using AsyncAwaitBestPractices.MVVM;
 using DotNetGraphQL.Common;
-using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace DotNetGraphQL.Mobile
 {
@@ -13,6 +14,7 @@ namespace DotNetGraphQL.Mobile
         readonly WeakEventManager<string> _pullToRefreshFailedEventManager = new WeakEventManager<string>();
 
         bool _isDogImageCollectionRefreshing;
+        IReadOnlyList<DogImagesModel> _dogImageList = Enumerable.Empty<DogImagesModel>().ToList();
 
         public DogImageListViewModel()
         {
@@ -25,27 +27,27 @@ namespace DotNetGraphQL.Mobile
             remove => _pullToRefreshFailedEventManager.RemoveEventHandler(value);
         }
 
-        public ObservableCollection<DogImagesModel> DogImageCollection { get; } = new ObservableCollection<DogImagesModel>();
         public IAsyncCommand RefreshDogCollectionCommand { get; }
+
+        public IReadOnlyList<DogImagesModel> DogImageList
+        {
+            get => _dogImageList;
+            set => SetProperty(ref _dogImageList, value);
+        }
 
         public bool IsDogImageCollectionRefreshing
         {
             get => _isDogImageCollectionRefreshing;
-            set => SetProperty(ref _isDogImageCollectionRefreshing, value, () => Device.BeginInvokeOnMainThread(RefreshDogCollectionCommand.RaiseCanExecuteChanged));
+            set => SetProperty(ref _isDogImageCollectionRefreshing, value, () => MainThread.BeginInvokeOnMainThread(RefreshDogCollectionCommand.RaiseCanExecuteChanged));
         }
 
         async Task ExecuteRefreshDogCollectionCommand()
         {
-            DogImageCollection.Clear();
-
             try
             {
-                await foreach(var dogImageModel in GraphQLService.GetDogImages().ConfigureAwait(false))
-                {
-                    DogImageCollection.Add(dogImageModel);
-                }
+                DogImageList = await GraphQLService.GetDogImages().ConfigureAwait(false);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 OnPullToRefreshFailed(e.Message);
             }

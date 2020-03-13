@@ -61,19 +61,20 @@
         <Reference Include="System.Numerics.Vectors" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="4.5.0.266-pre3" />
-        <PackageReference Include="Xamarin.Essentials" Version="1.4.0-pre2" />
+        <PackageReference Include="Xamarin.Forms" Version="4.6.0.379-pre1" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
         <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="4.1.0" />
         <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
         <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
         <PackageReference Include="modernhttpclient-updated" Version="3.4.3" />
-        <PackageReference Include="GraphQL.Client" Version="2.0.0-alpha.3" />
+        <PackageReference Include="GraphQL.Client" Version="2.1.2" />
         <PackageReference Include="Polly" Version="7.2.0" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />
         <Compile Include="Resources\Resource.designer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="CustomRenderers\LabelCustomRenderer.cs" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Resources\AboutResources.txt" />
@@ -105,10 +106,11 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\drawable\" />
+        <Folder Include="CustomRenderers\" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\DotNetGraphQL.Mobile\DotNetGraphQL.Mobile.csproj">
-            <Project>{6881E2A0-6663-4E4F-9AEF-B9B26C85D7A0}</Project>
+            <Project>{62CF3CB0-9E8D-490C-880B-4D98E873C59B}</Project>
             <Name>DotNetGraphQL.Mobile</Name>
         </ProjectReference>
     </ItemGroup>

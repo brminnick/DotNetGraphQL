@@ -8,9 +8,9 @@ namespace DotNetGraphQL.Mobile.iOS
     {
         public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
-            FFImageLoading.Forms.Platform.CachedImageRenderer.InitImageSourceHandler();
-
             global::Xamarin.Forms.Forms.Init();
+            Xamarin.Forms.Nuke.FormsHandler.Init();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(uiApplication, launchOptions);

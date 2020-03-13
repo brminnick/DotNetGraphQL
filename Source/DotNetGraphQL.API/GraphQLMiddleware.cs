@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -7,7 +6,6 @@ using System.Threading.Tasks;
 using DotNetGraphQL.Common;
 using GraphQL;
 using GraphQL.Common.Request;
-using GraphQL.Http;
 using GraphQL.Instrumentation;
 using GraphQL.Types;
 using GraphQL.Validation;

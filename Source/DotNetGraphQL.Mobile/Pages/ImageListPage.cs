@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using DotNetGraphQL.Common;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace DotNetGraphQL.Mobile
@@ -25,7 +26,7 @@ namespace DotNetGraphQL.Mobile
                 }
             };
             collectionView.SelectionChanged += HandleCollectionViewCollectionChanged;
-            collectionView.SetBinding(CollectionView.ItemsSourceProperty, nameof(DogImageListViewModel.DogImageCollection));
+            collectionView.SetBinding(CollectionView.ItemsSourceProperty, nameof(DogImageListViewModel.DogImageList));
 
             var refreshView = new RefreshView
             {
@@ -41,7 +42,7 @@ namespace DotNetGraphQL.Mobile
         }
 
         void HandlePullToRefreshFailed(object sender, string message) =>
-            Device.BeginInvokeOnMainThread(async () => await DisplayAlert("Refresh Failed", message, "OK"));
+            MainThread.BeginInvokeOnMainThread(async () => await DisplayAlert("Refresh Failed", message, "OK"));
 
         async void HandleCollectionViewCollectionChanged(object sender, SelectionChangedEventArgs e)
         {

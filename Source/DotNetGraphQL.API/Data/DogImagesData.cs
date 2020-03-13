@@ -25,7 +25,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateKirbyModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/0771b98c003d215ddf47d2c560424b6d/5E513A47/t51.2885-19/s320x320/19624561_1291655384266700_5712255956209893376_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com";
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/19624561_1291655384266700_5712255956209893376_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=XK5LyZ8vep4AX97Bbuj&oh=0d0e0eb3708878e34db3dcb4622b37f3&oe=5EA05447";
             var websiteUrl = "https://www.instagram.com/kirbygoldendoodle/";
             var name = "Kirby";
 
@@ -47,7 +47,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateWafflesModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/a87618792f3f54bb2cd5de467c17bfda/5E4DDFDF/t51.2885-19/s320x320/46352155_1525523697551015_4631879936745930752_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com";
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/46352155_1525523697551015_4631879936745930752_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=EiJ0AlhLVzYAX830I0f&oh=1a5bd30dc26df58c65bcf10cd4153fef&oe=5E9CF9DF";
             var websiteUrl = "https://www.instagram.com/hisnameiswaffles/";
             var name = "Waffles";
 
@@ -91,7 +91,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateTobyModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/7f6f7ede40df897e18c1d3e06d674e23/5E5AA2DA/t51.2885-15/e35/50014838_229200484627028_1458746312945381154_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=108";
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/16230046_172915856528400_4774846358509060096_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=NfaXU3Fxw1wAX_AJu9v&oh=869401793b2f1f8364782ee370e5ce40&oe=5EA1CF35";
             var websiteUrl = "https://www.instagram.com/tobytheyorki/";
             var name = "Toby";
 
@@ -113,7 +113,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateMozzieModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/5913ba9dc337bec65d32b336462dfa20/5E58A945/t51.2885-15/e35/33640369_226264147961207_7765603421549232128_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=111";
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/42388782_2122322261151834_3876945005322960896_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=VZy2-WICynwAX8bt9_j&oh=91552c06fc8885002a3cad5993799ba9&oe=5EA012EF";
             var websiteUrl = "https://www.instagram.com/mozziethepuppy/";
             var name = "Mozzie";
 
@@ -135,7 +135,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GeneratePiperModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/87132851249bbe49a1e363f5c640fbaa/5E56508F/t51.2885-19/s320x320/13734519_132392700533008_236125809_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com";
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/13734519_132392700533008_236125809_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=Ucixk2kYP58AX9Ys85h&oh=806f750e04bfb9dbe980d444d10ca1ae&oe=5EA56A8F";
             var websiteUrl = "https://www.instagram.com/piper.bt/";
             var name = "Piper";
 
@@ -156,7 +156,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateMiloModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/6a0024b89ed2548ecbb6ef50964479c0/5E639DFB/t51.2885-15/e35/57468059_604190606716273_5699381031045146998_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=101";
+            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/58409748_273107613568623_5295266751196430336_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=FNv6_JEaPHwAX_smGwf&oh=86e955953a5dae77074fc59df36ed8e0&oe=5E9AEDC3";
             var websiteUrl = "https://www.instagram.com/frenchton.milo/";
             var name = "Milo";
 

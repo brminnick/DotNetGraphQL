@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DotNetGraphQL.Common;
+using GraphQL;
 using GraphQL.Client.Http;
-using GraphQL.Common.Exceptions;
-using GraphQL.Common.Request;
-using GraphQL.Common.Response;
 using Polly;
 
 namespace DotNetGraphQL.Mobile
@@ -17,17 +15,16 @@ namespace DotNetGraphQL.Mobile
 
         static GraphQLHttpClient Client => _clientHolder.Value;
 
-        public static async IAsyncEnumerable<DogImagesModel> GetDogImages()
+        public static async Task<List<DogImagesModel>> GetDogImages()
         {
             var graphQLRequest = new GraphQLRequest
             {
                 Query = "query { dogs  { avatarUrl, birthDate, breed, coatColor, imagesList, title, websiteUrl } }"
             };
 
-            var gitHubUserResponse = await AttemptAndRetry(() => Client.SendQueryAsync(graphQLRequest)).ConfigureAwait(false);
+            var dogImages = await AttemptAndRetry(() => Client.SendQueryAsync<DogImagesGraphQLResponse>(graphQLRequest)).ConfigureAwait(false);
 
-            foreach (var dogImageModel in gitHubUserResponse.GetDataFieldAs<IEnumerable<DogImagesModel>>("dogs"))
-                yield return dogImageModel;
+            return dogImages.Dogs;
         }
 
         static GraphQLHttpClient CreateGraphQLClient() => new GraphQLHttpClient(new GraphQLHttpClientOptions
@@ -38,17 +35,16 @@ namespace DotNetGraphQL.Mobile
 #endif
         });
 
-        static async Task<GraphQLResponse> AttemptAndRetry(Func<Task<GraphQLResponse>> action, int numRetries = 2)
+        static async Task<T> AttemptAndRetry<T>(Func<Task<GraphQLResponse<T>>> action, int numRetries = 2)
         {
             var response = await Policy.Handle<Exception>().WaitAndRetryAsync(numRetries, pollyRetryAttempt).ExecuteAsync(action).ConfigureAwait(false);
 
             if (response.Errors != null && response.Errors.Count() > 1)
-                throw new AggregateException(response.Errors.Select(x => new GraphQLException(x)));
+                throw new AggregateException(response.Errors.Select(x => new Exception(x.ToString())));
+            else if (response.Errors != null && response.Errors.Any())
+                throw new Exception(response.Errors.First().ToString());
 
-            if (response.Errors != null && response.Errors.Count() is 1)
-                throw new GraphQLException(response.Errors.First());
-
-            return response;
+            return response.Data;
 
             static TimeSpan pollyRetryAttempt(int attemptNumber) => TimeSpan.FromSeconds(Math.Pow(2, attemptNumber));
         }
