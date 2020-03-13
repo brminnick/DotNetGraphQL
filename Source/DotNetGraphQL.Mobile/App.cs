@@ -4,6 +4,10 @@ namespace DotNetGraphQL.Mobile
 {
     public class App : Application
     {
-        public App() => MainPage = new BaseNavigationPage(new DogImageListPage());
+        public App()
+        {
+            Device.SetFlags(new[] { "Markup_Experimental" });
+            MainPage = new BaseNavigationPage(new DogImageListPage());
+        }
     }
 }
