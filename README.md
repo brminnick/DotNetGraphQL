@@ -1,4 +1,4 @@
-# .Net GraphQL
+# GraphQL in .NET
 
 If you're new to GraphQL, check out these videos featured in the [Learn More](#learn-more) section, below
 - [Learning GraphQL Series](#learning-graphql-series)
