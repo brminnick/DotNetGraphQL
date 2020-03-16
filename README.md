@@ -3,11 +3,14 @@
 If you're new to GraphQL, check out these videos featured in the [Learn More](#learn-more) section, below
 - [Learning GraphQL Series](#learning-graphql-series)
 - [Xamarin + GraphQL](#xamarin--graphql)
+- On .NET Show, Channel 9
+  - [Introduction to GraphQL](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=dotnetgraphql-github-bramin)
+  - [Creating a GraphQL Backend in C#](https://channel9.msdn.com/Shows/On-NET/Creating-a-GraphQL-Backend?WT.mc_id=dotnetgraphql-github-bramin)
+  - [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-a-GraphQL-in-C?WT.mc_id=dotnetgraphql-codetraveler-bramin)
 
 To run this sample, follow the [Getting Started Instructions, below](#getting-started).
 
 This app was featured at [GraphQL Summit 2019](https://codetraveler.io/GraphQLSummit-DotNet). 
-
 
 
 ### GraphQL Backend
