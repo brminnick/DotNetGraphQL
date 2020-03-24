@@ -14,7 +14,7 @@
         <AssemblyName>DotNetGraphQL.Mobile.iOS</AssemblyName>
         <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
         <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-        <LangVersion>8.0</LangVersion>
+        <LangVersion>latest</LangVersion>
         <Nullable>Enable</Nullable>
         <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     </PropertyGroup>
@@ -131,7 +131,8 @@
         <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="4.1.0" />
         <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
         <PackageReference Include="modernhttpclient-updated" Version="3.4.3" />
-        <PackageReference Include="GraphQL.Client" Version="2.1.2" />
+        <PackageReference Include="GraphQL.Client" Version="3.0.0" />
+        <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="3.0.0" />
         <PackageReference Include="Polly" Version="7.2.0" />
         <PackageReference Include="Xamarin.Forms.Nuke" Version="8.4.0" />
     </ItemGroup>

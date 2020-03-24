@@ -69,7 +69,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateWhiskeyModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/vp/d0cc41e4c2f2fad7e41ed5f9462421f4/5E6FDB22/t51.2885-19/s320x320/75487930_545788479570130_7341431923115294720_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com";
+            var avatarUrl = "https://images.squarespace-cdn.com/content/v1/57cca06f3e00bed93badcd9c/1566682240113-70ECATYDEEH5FBW1NTPW/ke17ZwdGBToddI8pDm48kIBEKF6uBDDDpZ6S-0pxI0Z7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Uc18tlTqrULqHQaddUm6wPTBY5imP5K7_W35X5uaSDoHZCkVnhDMoqWnIzF2cFonXg/IMG_0123.JPG?format=2500w";
             var websiteUrl = "https://www.whiskeythegoldendoodle.com/";
             var name = "Whiskey";
 

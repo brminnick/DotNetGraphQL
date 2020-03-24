@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DotNetGraphQL.Common;
 using GraphQL;
 using GraphQL.Client.Http;
+using GraphQL.Client.Serializer.Newtonsoft;
 using Polly;
 
 namespace DotNetGraphQL.Mobile
@@ -27,13 +28,18 @@ namespace DotNetGraphQL.Mobile
             return dogImages.Dogs;
         }
 
-        static GraphQLHttpClient CreateGraphQLClient() => new GraphQLHttpClient(new GraphQLHttpClientOptions
-        {
-            EndPoint = new Uri(BackendConstants.GraphQLApiUrl),
+        static GraphQLHttpClient CreateGraphQLClient() {
+
+            var options = new GraphQLHttpClientOptions
+            {
+                EndPoint = new Uri(BackendConstants.GraphQLApiUrl),
 #if !DEBUG
-            HttpMessageHandler = new ModernHttpClient.NativeMessageHandler()
+                HttpMessageHandler = new ModernHttpClient.NativeMessageHandler()
 #endif
-        });
+            };
+
+            return new GraphQLHttpClient(options, new NewtonsoftJsonSerializer());
+        }
 
         static async Task<T> AttemptAndRetry<T>(Func<Task<GraphQLResponse<T>>> action, int numRetries = 2)
         {
