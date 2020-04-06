@@ -3,6 +3,7 @@ using ImageCircle.Forms.Plugin.Abstractions;
 using Xamarin.Forms;
 using Xamarin.Forms.Markup;
 using static Xamarin.Forms.Markup.GridRowsColumns;
+using static DotNetGraphQL.Mobile.GridLengths;
 
 namespace DotNetGraphQL.Mobile
 {
@@ -12,9 +13,10 @@ namespace DotNetGraphQL.Mobile
 
         class DogImageListDataTemplate : DataTemplate
         {
-            const int circleImageHeight = 90;
-            const int fontSize = 16;
-            const int padding = 5;
+            const int _circleImageHeight = 90;
+            const double _titleFontSize = 21.333;
+            const int _fontSize = 16;
+            const int _padding = 5;
 
             public DogImageListDataTemplate(DogImagesModel dogImagesModel) : base(() => CreateContentFrame(dogImagesModel))
             {
@@ -29,13 +31,13 @@ namespace DotNetGraphQL.Mobile
             static Grid CreateContentFrame(DogImagesModel dogImagesModel) => new Grid
             {
                 RowDefinitions = Rows.Define(
-                    (ContentFrameRow.TopPadding, new GridLength(padding, GridUnitType.Absolute)),
-                    (ContentFrameRow.Content, new GridLength(1, GridUnitType.Star))),
+                    (ContentFrameRow.TopPadding, AbsoluteGridLength(_padding)),
+                    (ContentFrameRow.Content, StarGridLength(1))),
 
                 ColumnDefinitions = Columns.Define(
-                    (ContentFrameColumn.LeftPadding, new GridLength(padding / 2, GridUnitType.Absolute)),
-                    (ContentFrameColumn.Content, new GridLength(1, GridUnitType.Star)),
-                    (ContentFrameColumn.RightPadding, new GridLength(padding / 2, GridUnitType.Absolute))),
+                    (ContentFrameColumn.LeftPadding, AbsoluteGridLength(_padding / 2)),
+                    (ContentFrameColumn.Content, StarGridLength(1)),
+                    (ContentFrameColumn.RightPadding, AbsoluteGridLength(_padding / 2))),
 
                 Children =
                 {
@@ -54,31 +56,31 @@ namespace DotNetGraphQL.Mobile
                 VerticalOptions = LayoutOptions.StartAndExpand,
 
                 RowDefinitions = Rows.Define(
-                    (ImageLayoutRow.TopPadding, new GridLength(1, GridUnitType.Absolute)),
-                    (ImageLayoutRow.Name, new GridLength(fontSize * 4 / 3 + 5, GridUnitType.Absolute)),
-                    (ImageLayoutRow.Breed, new GridLength(fontSize + 5, GridUnitType.Absolute)),
-                    (ImageLayoutRow.Coat, new GridLength(fontSize + 5, GridUnitType.Absolute)),
-                    (ImageLayoutRow.Birthday, new GridLength(fontSize + 5, GridUnitType.Absolute)),
-                    (ImageLayoutRow.BottomPadding, new GridLength(5, GridUnitType.Absolute))),
+                    (ImageLayoutRow.TopPadding, AbsoluteGridLength(1)),
+                    (ImageLayoutRow.Name, AbsoluteGridLength(_titleFontSize + _padding)),
+                    (ImageLayoutRow.Breed, AbsoluteGridLength(_fontSize + _padding)),
+                    (ImageLayoutRow.Coat, AbsoluteGridLength(_fontSize + _padding)),
+                    (ImageLayoutRow.Birthday, AbsoluteGridLength(_fontSize)),
+                    (ImageLayoutRow.BottomPadding, AbsoluteGridLength(_padding))),
 
                 ColumnDefinitions = Columns.Define(
-                    (ImageLayoutColumn.Avatar, new GridLength(circleImageHeight, GridUnitType.Absolute)),
-                    (ImageLayoutColumn.MiddlePadding, new GridLength(2, GridUnitType.Absolute)),
-                    (ImageLayoutColumn.Text, new GridLength(1, GridUnitType.Star))),
+                    (ImageLayoutColumn.Avatar, AbsoluteGridLength(_circleImageHeight)),
+                    (ImageLayoutColumn.MiddlePadding, AbsoluteGridLength(2)),
+                    (ImageLayoutColumn.Text, StarGridLength(1))),
 
                 Children =
                 {
                     new AvatarImage(dogImagesModel.AvatarUrl).Row(ImageLayoutRow.Name).Column(ImageLayoutColumn.Avatar).RowSpan(All<ImageLayoutRow>()),
                     new DogNameLabel(dogImagesModel.Title).Row(ImageLayoutRow.Name).Column(ImageLayoutColumn.Text),
-                    new DarkBlueLabel(fontSize, $"🐶 {dogImagesModel.Breed}").Row(ImageLayoutRow.Breed).Column(ImageLayoutColumn.Text),
-                    new DarkBlueLabel(fontSize, $"🎨 {dogImagesModel.CoatColor}").Row(ImageLayoutRow.Coat).Column(ImageLayoutColumn.Text),
-                    new DarkBlueLabel(fontSize, $"🎂 {dogImagesModel.BirthDate?.ToString("MMMM dd yyyy") ?? "Unknown"}").Row(ImageLayoutRow.Birthday).Column(ImageLayoutColumn.Text),
+                    new DarkBlueLabel(_fontSize, $"🐶 {dogImagesModel.Breed}").Row(ImageLayoutRow.Breed).Column(ImageLayoutColumn.Text),
+                    new DarkBlueLabel(_fontSize, $"🎨 {dogImagesModel.CoatColor}").Row(ImageLayoutRow.Coat).Column(ImageLayoutColumn.Text),
+                    new DarkBlueLabel(_fontSize, $"🎂 {dogImagesModel.BirthDate?.ToString("MMMM dd yyyy") ?? "Unknown"}").Row(ImageLayoutRow.Birthday).Column(ImageLayoutColumn.Text),
                 }
             };
 
             class DogNameLabel : DarkBlueLabel
             {
-                public DogNameLabel(string text) : base(fontSize * 4 / 3, text)
+                public DogNameLabel(string text) : base(_titleFontSize, text)
                 {
                     FontAttributes = FontAttributes.Bold;
                     HorizontalTextAlignment = TextAlignment.Start;
@@ -117,15 +119,21 @@ namespace DotNetGraphQL.Mobile
 
             class AvatarImage : CircleImage
             {
-                public AvatarImage(string source)
+                public AvatarImage(in string source)
                 {
                     Source = source;
-                    HeightRequest = circleImageHeight;
+                    HeightRequest = _circleImageHeight;
                     HorizontalOptions = LayoutOptions.Start;
                     VerticalOptions = LayoutOptions.Center;
                     Aspect = Aspect.AspectFill;
                 }
             }
         }
+    }
+
+    static class GridLengths
+    {
+        public static GridLength AbsoluteGridLength(double value) => new GridLength(value, GridUnitType.Absolute);
+        public static GridLength StarGridLength(double value) => new GridLength(value, GridUnitType.Star);
     }
 }
