@@ -12,6 +12,8 @@ To run this sample, follow the [Getting Started Instructions, below](#getting-st
 
 This app was featured at [GraphQL Summit 2019](https://codetraveler.io/GraphQLSummit-DotNet). 
 
+<a href="https://www.buymeacoffee.com/bminnick" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
 
 ### GraphQL Backend
 The GraphQL backend is created in C# using the [GraphQL NuGet Package](https://www.nuget.org/packages/GraphQL/).
