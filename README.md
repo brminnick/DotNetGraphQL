@@ -127,8 +127,6 @@ In this series, we cover how to create an end-to-end soolution, creating GraphQL
 
 - [Introduction to GraphQL](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=dotnetgraphql-github-bramin)
 - [Creating a GraphQL Backend in C#](https://channel9.msdn.com/Shows/On-NET/Creating-a-GraphQL-Backend?WT.mc_id=dotnetgraphql-github-bramin)
-- [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-a-GraphQL-in-C?WT.mc_id=dotnetgraphql-codetraveler-bramin)
+- [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-GraphQL-in-C?WT.mc_id=dotnetgraphql-codetraveler-bramin)
 
 [![On .NET Show](https://user-images.githubusercontent.com/13558917/76797023-df22c600-6789-11ea-8595-99f90df499a9.png)](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=dotnetgraphql-github-bramin)
-- [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-a-GraphQL-in-C?WT.mc_id=dotnetgraphql-codetraveler-bramin)
-- [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-a-GraphQL-in-C?WT.mc_id=dotnetgraphql-codetraveler-bramin)
