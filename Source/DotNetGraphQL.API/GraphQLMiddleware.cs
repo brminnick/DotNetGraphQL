@@ -19,9 +19,9 @@ namespace DotNetGraphQL.API
         readonly static Lazy<JsonSerializer> _serializerHolder = new Lazy<JsonSerializer>(() => new JsonSerializer());
 
         readonly RequestDelegate _next;
+        readonly IDocumentWriter _writer;
         readonly GraphQLSettings _settings;
         readonly IDocumentExecuter _executer;
-        readonly IDocumentWriter _writer;
 
         public GraphQLMiddleware(RequestDelegate next, GraphQLSettings settings, IDocumentExecuter executer, IDocumentWriter writer) =>
             (_next, _settings, _executer, _writer) = (next, settings, executer, writer);
@@ -38,6 +38,7 @@ namespace DotNetGraphQL.API
             return _next(context);
         }
 
+        [return: System.Diagnostics.CodeAnalysis.MaybeNull]
         static T Deserialize<T>(Stream stream)
         {
             using var streamReader = new StreamReader(stream);
@@ -51,7 +52,7 @@ namespace DotNetGraphQL.API
             try
             {
                 return (context.Request.Path.StartsWithSegments(_settings.Path) && context.Request.Method.Equals("POST", StringComparison.OrdinalIgnoreCase),
-                            Deserialize<GraphQLRequest>(context.Request.Body));
+                            Deserialize<GraphQLRequest?>(context.Request.Body));
             }
             catch
             {

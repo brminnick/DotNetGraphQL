@@ -25,7 +25,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateKirbyModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/19624561_1291655384266700_5712255956209893376_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=XK5LyZ8vep4AX97Bbuj&oh=0d0e0eb3708878e34db3dcb4622b37f3&oe=5EA05447";
+            var avatarUrl = "https://user-images.githubusercontent.com/13558917/88319324-d78fa280-ccd0-11ea-94c7-9c63bb13346a.jpg";
             var websiteUrl = "https://www.instagram.com/kirbygoldendoodle/";
             var name = "Kirby";
 
@@ -47,7 +47,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateWafflesModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/46352155_1525523697551015_4631879936745930752_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=EiJ0AlhLVzYAX830I0f&oh=1a5bd30dc26df58c65bcf10cd4153fef&oe=5E9CF9DF";
+            var avatarUrl = "https://user-images.githubusercontent.com/13558917/88319372-e70eeb80-ccd0-11ea-967d-61c4504870e6.jpg";
             var websiteUrl = "https://www.instagram.com/hisnameiswaffles/";
             var name = "Waffles";
 
@@ -91,7 +91,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateTobyModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/16230046_172915856528400_4774846358509060096_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=NfaXU3Fxw1wAX_AJu9v&oh=869401793b2f1f8364782ee370e5ce40&oe=5EA1CF35";
+            var avatarUrl = "https://user-images.githubusercontent.com/13558917/88319462-0f96e580-ccd1-11ea-8b75-99b1c96fc826.jpg";
             var websiteUrl = "https://www.instagram.com/tobytheyorki/";
             var name = "Toby";
 
@@ -113,7 +113,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateMozzieModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/42388782_2122322261151834_3876945005322960896_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=VZy2-WICynwAX8bt9_j&oh=91552c06fc8885002a3cad5993799ba9&oe=5EA012EF";
+            var avatarUrl = "https://user-images.githubusercontent.com/13558917/88319558-2d644a80-ccd1-11ea-87c8-017e439a10c4.jpg";
             var websiteUrl = "https://www.instagram.com/mozziethepuppy/";
             var name = "Mozzie";
 
@@ -135,7 +135,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GeneratePiperModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/13734519_132392700533008_236125809_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=Ucixk2kYP58AX9Ys85h&oh=806f750e04bfb9dbe980d444d10ca1ae&oe=5EA56A8F";
+            var avatarUrl = "https://user-images.githubusercontent.com/13558917/88319709-64d2f700-ccd1-11ea-89f1-acec01d686a3.jpg";
             var websiteUrl = "https://www.instagram.com/piper.bt/";
             var name = "Piper";
 
@@ -156,7 +156,7 @@ namespace DotNetGraphQL.API
 
         static DogImagesModel GenerateMiloModel()
         {
-            var avatarUrl = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/s320x320/58409748_273107613568623_5295266751196430336_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=FNv6_JEaPHwAX_smGwf&oh=86e955953a5dae77074fc59df36ed8e0&oe=5E9AEDC3";
+            var avatarUrl = "https://user-images.githubusercontent.com/13558917/88319786-803e0200-ccd1-11ea-9b80-a8382ae49bcd.jpg";
             var websiteUrl = "https://www.instagram.com/frenchton.milo/";
             var name = "Milo";
 

@@ -57,6 +57,6 @@ namespace DotNetGraphQL.Mobile
             }
         }
 
-        void OnPullToRefreshFailed(string errorMessage) => _pullToRefreshFailedEventManager.HandleEvent(this, errorMessage, nameof(PullToRefreshFailed));
+        void OnPullToRefreshFailed(string errorMessage) => _pullToRefreshFailedEventManager.RaiseEvent(this, errorMessage, nameof(PullToRefreshFailed));
     }
 }
