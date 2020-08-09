@@ -6,7 +6,7 @@ If you're new to GraphQL, check out these videos featured in the [Learn More](#l
 - On .NET Show, Channel 9
   - [Introduction to GraphQL](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=dotnetgraphql-github-bramin)
   - [Creating a GraphQL Backend in C#](https://channel9.msdn.com/Shows/On-NET/Creating-a-GraphQL-Backend?WT.mc_id=dotnetgraphql-github-bramin)
-  - [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-a-GraphQL-in-C?WT.mc_id=dotnetgraphql-codetraveler-bramin)
+  - [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-a-GraphQL-in-C?WT.mc_id=dotnetgraphql-github-bramin)
 
 To run this sample, follow the [Getting Started Instructions, below](#getting-started).
 
@@ -23,7 +23,7 @@ The GraphQL backend is created in C# using the [GraphQL NuGet Package](https://w
 | ![GraphiQL](https://user-images.githubusercontent.com/13558917/67914743-3a8f4700-fb4e-11e9-936d-320dfdd5d874.png) |
 
 ### Mobile
-The mobile app is created in C# using [Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=DotNetGraphQL-github-bramin) and the [GraphQL.Client NuGet Package](https://www.nuget.org/packages/GraphQL.Client/).
+The mobile app is created in C# using [Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=dotnetgraphql-github-bramin) and the [GraphQL.Client NuGet Package](https://www.nuget.org/packages/GraphQL.Client/).
 
 | Xamarin.iOS | Xamarin.Android |
 | ----------- | --------------- |
@@ -81,11 +81,11 @@ Learn more about Xamarin + GraphQL
 
 ### Xamarin Resources
 
-- [Getting Started with Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=DotNetGraphQL-github-bramin)
-- [Getting Started with Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms?WT.mc_id=DotNetGraphQL-github-bramin)
-- [Install Visual Studio (PC) + Xamarin](https://docs.microsoft.com/xamarin/get-started/installation/windows?WT.mc_id=DotNetGraphQL-github-bramin)
-- [Install Visual Studio for Mac + Xamarin](https://docs.microsoft.com/visualstudio/mac/installation?view=vsmac-2019&WT.mc_id=DotNetGraphQL-github-bramin)
-- [Microsoft Learn: Build Mobile Apps With Xamarin.Forms](https://docs.microsoft.com/learn/paths/build-mobile-apps-with-xamarin-forms?WT.mc_id=DotNetGraphQL-github-bramin)
+- [Getting Started with Xamarin](https://docs.microsoft.com/xamarin/cross-platform/?WT.mc_id=dotnetgraphql-github-bramin)
+- [Getting Started with Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms?WT.mc_id=dotnetgraphql-github-bramin)
+- [Install Visual Studio (PC) + Xamarin](https://docs.microsoft.com/xamarin/get-started/installation/windows?WT.mc_id=dotnetgraphql-github-bramin)
+- [Install Visual Studio for Mac + Xamarin](https://docs.microsoft.com/visualstudio/mac/installation?view=vsmac-2019&WT.mc_id=dotnetgraphql-github-bramin)
+- [Microsoft Learn: Build Mobile Apps With Xamarin.Forms](https://docs.microsoft.com/learn/paths/build-mobile-apps-with-xamarin-forms?WT.mc_id=dotnetgraphql-github-bramin)
 - Xamarin Source Code
     - [Xamarin.iOS](https://github.com/xamarin/xamarin-macios)
     - [Xamarin.Android](https://github.com/xamarin/xamarin-android)
@@ -113,13 +113,13 @@ This session on GraphQL + C# was delivered at [GraphQL Summit 2019](https://code
 
 The session on Xamarin + GraphQL was delivered at [Xamarin Developer Summit 2019](https://www.codetraveler.io/xamdevsummit-graphql/). It demonstrates how to create a Xamarin app in C# and connect it to an existing GraphQL Backend.
 
-[![Xamarin + GraphQL Video](https://user-images.githubusercontent.com/13558917/61256668-6a8f1780-a722-11e9-97ad-8188ec6eab8f.png)](https://channel9.msdn.com/Events/Xamarin/Xamarin-Developer-Summit-2019/XamarinGraphQL?WT.mc_id=DotNetGraphQL-github-bramin)
+[![Xamarin + GraphQL Video](https://user-images.githubusercontent.com/13558917/61256668-6a8f1780-a722-11e9-97ad-8188ec6eab8f.png)](https://channel9.msdn.com/Events/Xamarin/Xamarin-Developer-Summit-2019/XamarinGraphQL?WT.mc_id=dotnetgraphql-github-bramin)
 
 ### Learning GraphQL Series
 
 This special series teaches the basics of GraphQL, how to interact with an existing GraphQL endpoint, how to create your first GraphQL Server, and how to deploy your GraphQL Server to the cloud using Azure! 
 
-[![Learning GraphQL Series](https://sec.ch9.ms/ch9/167c/d62bfc00-95ae-42a1-ab23-af9b9602167c/IntrotoGraphQL_512.jpg)](https://channel9.msdn.com/Series/GraphQL?WT.mc_id=DotNetGraphQL-github-bramin)
+[![Learning GraphQL Series](https://sec.ch9.ms/ch9/167c/d62bfc00-95ae-42a1-ab23-af9b9602167c/IntrotoGraphQL_512.jpg)](https://channel9.msdn.com/Series/GraphQL?WT.mc_id=dotnetgraphql-github-bramin)
 
 ### On .NET Show
 
@@ -127,6 +127,6 @@ In this series, we cover how to create an end-to-end soolution, creating GraphQL
 
 - [Introduction to GraphQL](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=dotnetgraphql-github-bramin)
 - [Creating a GraphQL Backend in C#](https://channel9.msdn.com/Shows/On-NET/Creating-a-GraphQL-Backend?WT.mc_id=dotnetgraphql-github-bramin)
-- [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-GraphQL-in-C?WT.mc_id=dotnetgraphql-codetraveler-bramin)
+- [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-GraphQL-in-C?WT.mc_id=dotnetgraphql-github-bramin)
 
 [![On .NET Show](https://user-images.githubusercontent.com/13558917/76797023-df22c600-6789-11ea-8595-99f90df499a9.png)](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=dotnetgraphql-github-bramin)
