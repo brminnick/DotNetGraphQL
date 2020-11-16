@@ -2,6 +2,7 @@
 using DotNetGraphQL.Common;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Markup;
 
 namespace DotNetGraphQL.Mobile
 {
@@ -11,34 +12,22 @@ namespace DotNetGraphQL.Mobile
         {
             ViewModel.PullToRefreshFailed += HandlePullToRefreshFailed;
 
-            var collectionView = new CollectionView
-            {
-                ItemTemplate = new DogImageListDataTemplateSelector(),
-                SelectionMode = SelectionMode.Single,
-                EmptyView = new Label
-                {
-                    Text = "🐶",
-                    FontSize = 128,
-                    VerticalOptions = LayoutOptions.Center,
-                    HorizontalOptions = LayoutOptions.Center,
-                    HorizontalTextAlignment = TextAlignment.Center,
-                    VerticalTextAlignment = TextAlignment.Center,
-                }
-            };
-            collectionView.SelectionChanged += HandleCollectionViewCollectionChanged;
-            collectionView.SetBinding(CollectionView.ItemsSourceProperty, nameof(DogImageListViewModel.DogImageList));
-
-            var refreshView = new RefreshView
-            {
-                Content = collectionView,
-                RefreshColor = Color.FromHex("1F2B2E")
-            };
-            refreshView.SetBinding(RefreshView.IsRefreshingProperty, nameof(DogImageListViewModel.IsDogImageCollectionRefreshing));
-            refreshView.SetBinding(RefreshView.CommandProperty, nameof(DogImageListViewModel.RefreshDogCollectionCommand));
-
             Title = "Favorite Dogs";
 
-            Content = refreshView;
+            Content = new RefreshView
+            {
+                RefreshColor = Color.FromHex("1F2B2E"),
+
+                Content = new CollectionView
+                {
+                    EmptyView = new Label { Text = "🐶" }.Font(128).Center().TextCenter(),
+                    ItemTemplate = new DogImageListDataTemplateSelector(),
+                    SelectionMode = SelectionMode.Single,
+                }.Bind(CollectionView.ItemsSourceProperty, nameof(DogImageListViewModel.DogImageList))
+                 .Invoke(collectionView => collectionView.SelectionChanged += HandleCollectionViewCollectionChanged)
+
+            }.Bind(RefreshView.IsRefreshingProperty, nameof(DogImageListViewModel.IsDogImageCollectionRefreshing))
+             .Bind(RefreshView.CommandProperty, nameof(DogImageListViewModel.RefreshDogCollectionCommand));
         }
 
         void HandlePullToRefreshFailed(object sender, string message) =>

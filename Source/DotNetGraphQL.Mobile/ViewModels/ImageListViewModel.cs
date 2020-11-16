@@ -14,7 +14,7 @@ namespace DotNetGraphQL.Mobile
         readonly WeakEventManager<string> _pullToRefreshFailedEventManager = new WeakEventManager<string>();
 
         bool _isDogImageCollectionRefreshing;
-        IReadOnlyList<DogImagesModel> _dogImageList = Enumerable.Empty<DogImagesModel>().ToList();
+        IReadOnlyList<DogImagesModel> _dogImageList = Array.Empty<DogImagesModel>();
 
         public DogImageListViewModel()
         {
