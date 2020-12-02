@@ -2,7 +2,7 @@
 using DotNetGraphQL.Common;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Markup;
+using Xamarin.CommunityToolkit.Markup;
 
 namespace DotNetGraphQL.Mobile
 {
@@ -20,7 +20,7 @@ namespace DotNetGraphQL.Mobile
 
                 Content = new CollectionView
                 {
-                    EmptyView = new Label { Text = "🐶" }.Font(128).Center().TextCenter(),
+                    EmptyView = new Label { Text = "🐶" }.Font(size: 128).Center().TextCenter(),
                     ItemTemplate = new DogImageListDataTemplateSelector(),
                     SelectionMode = SelectionMode.Single,
                 }.Bind(CollectionView.ItemsSourceProperty, nameof(DogImageListViewModel.DogImageList))
