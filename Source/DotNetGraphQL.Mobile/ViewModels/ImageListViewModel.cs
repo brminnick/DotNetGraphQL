@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AsyncAwaitBestPractices;
 using AsyncAwaitBestPractices.MVVM;
@@ -11,7 +10,7 @@ namespace DotNetGraphQL.Mobile
 {
     class DogImageListViewModel : BaseViewModel
     {
-        readonly WeakEventManager<string> _pullToRefreshFailedEventManager = new WeakEventManager<string>();
+        readonly WeakEventManager<string> _pullToRefreshFailedEventManager = new();
 
         bool _isDogImageCollectionRefreshing;
         IReadOnlyList<DogImagesModel> _dogImageList = Array.Empty<DogImagesModel>();

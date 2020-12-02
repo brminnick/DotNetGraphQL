@@ -13,10 +13,10 @@ namespace DotNetGraphQL.Mobile
 
         class DogImageListDataTemplate : DataTemplate
         {
+            const int _padding = 5;
+            const int _fontSize = 16;
             const int _circleImageHeight = 90;
             const double _titleFontSize = 21.333;
-            const int _fontSize = 16;
-            const int _padding = 5;
 
             public DogImageListDataTemplate(DogImagesModel dogImagesModel) : base(() => CreateContentFrame(dogImagesModel))
             {
@@ -28,7 +28,7 @@ namespace DotNetGraphQL.Mobile
             enum ImageLayoutRow { TopPadding, Name, Breed, Coat, Birthday, BottomPadding }
             enum ImageLayoutColumn { Avatar, MiddlePadding, Text }
 
-            static Grid CreateContentFrame(DogImagesModel dogImagesModel) => new Grid
+            static Grid CreateContentFrame(DogImagesModel dogImagesModel) => new()
             {
                 RowDefinitions = Rows.Define(
                     (ContentFrameRow.TopPadding, AbsoluteGridLength(_padding)),
@@ -45,7 +45,7 @@ namespace DotNetGraphQL.Mobile
                 }
             };
 
-            static Grid CreateImageLayout(DogImagesModel dogImagesModel) => new Grid
+            static Grid CreateImageLayout(DogImagesModel dogImagesModel) => new()
             {
                 BackgroundColor = Color.Transparent,
 
@@ -133,7 +133,7 @@ namespace DotNetGraphQL.Mobile
 
     static class GridLengths
     {
-        public static GridLength AbsoluteGridLength(double value) => new GridLength(value, GridUnitType.Absolute);
-        public static GridLength StarGridLength(double value) => new GridLength(value, GridUnitType.Star);
+        public static GridLength AbsoluteGridLength(double value) => new(value, GridUnitType.Absolute);
+        public static GridLength StarGridLength(double value) => new(value, GridUnitType.Star);
     }
 }

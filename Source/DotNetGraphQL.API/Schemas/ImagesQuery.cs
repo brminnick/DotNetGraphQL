@@ -26,7 +26,7 @@ namespace DotNetGraphQL.API
 
         }
 
-        IEnumerable<DogImagesModel> GetDogImagesByNameOrBreed(string? coatColor, string? breed)
+        static IEnumerable<DogImagesModel> GetDogImagesByNameOrBreed(string? coatColor, string? breed)
         {
             bool doesCoatColorContainValue = !string.IsNullOrWhiteSpace(coatColor);
             bool doesBreedContainValue = !string.IsNullOrWhiteSpace(breed);

@@ -16,7 +16,7 @@ namespace DotNetGraphQL.API
 {
     class GraphQLMiddleware
     {
-        readonly static Lazy<JsonSerializer> _serializerHolder = new Lazy<JsonSerializer>(() => new JsonSerializer());
+        readonly static Lazy<JsonSerializer> _serializerHolder = new(() => new JsonSerializer());
 
         readonly RequestDelegate _next;
         readonly IDocumentWriter _writer;

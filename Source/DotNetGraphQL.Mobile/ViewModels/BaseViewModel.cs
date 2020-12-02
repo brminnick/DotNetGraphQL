@@ -7,7 +7,7 @@ namespace DotNetGraphQL.Mobile
 {
     abstract class BaseViewModel : INotifyPropertyChanged
     {
-        readonly WeakEventManager _propertyChangedEventManager = new WeakEventManager();
+        readonly WeakEventManager _propertyChangedEventManager = new();
 
         event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
         {

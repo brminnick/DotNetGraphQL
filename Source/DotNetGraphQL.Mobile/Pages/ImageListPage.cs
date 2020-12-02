@@ -24,16 +24,16 @@ namespace DotNetGraphQL.Mobile
                     ItemTemplate = new DogImageListDataTemplateSelector(),
                     SelectionMode = SelectionMode.Single,
                 }.Bind(CollectionView.ItemsSourceProperty, nameof(DogImageListViewModel.DogImageList))
-                 .Invoke(collectionView => collectionView.SelectionChanged += HandleCollectionViewCollectionChanged)
+                 .Invoke(collectionView => collectionView.SelectionChanged += HandleCollectionViewSelectionChanged)
 
-            }.Bind(RefreshView.IsRefreshingProperty, nameof(DogImageListViewModel.IsDogImageCollectionRefreshing))
-             .Bind(RefreshView.CommandProperty, nameof(DogImageListViewModel.RefreshDogCollectionCommand));
+            }.Bind(RefreshView.CommandProperty, nameof(DogImageListViewModel.RefreshDogCollectionCommand))
+             .Bind(RefreshView.IsRefreshingProperty, nameof(DogImageListViewModel.IsDogImageCollectionRefreshing));
         }
 
         void HandlePullToRefreshFailed(object sender, string message) =>
             MainThread.BeginInvokeOnMainThread(async () => await DisplayAlert("Refresh Failed", message, "OK"));
 
-        async void HandleCollectionViewCollectionChanged(object sender, SelectionChangedEventArgs e)
+        async void HandleCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var collectionView = (CollectionView)sender;
             collectionView.SelectedItem = null;
