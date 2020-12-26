@@ -7,6 +7,6 @@ namespace DotNetGraphQL.Common
     {
         public DogImagesGraphQLResponse(IEnumerable<DogImagesModel> dogs) => Dogs = dogs.ToList();
 
-        public List<DogImagesModel> Dogs { get; }
+        public IReadOnlyList<DogImagesModel> Dogs { get; }
     }
 }

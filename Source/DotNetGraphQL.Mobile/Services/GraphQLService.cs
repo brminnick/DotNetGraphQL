@@ -16,7 +16,7 @@ namespace DotNetGraphQL.Mobile
 
         static GraphQLHttpClient Client => _clientHolder.Value;
 
-        public static async Task<List<DogImagesModel>> GetDogImages()
+        public static async Task<IReadOnlyList<DogImagesModel>> GetDogImages()
         {
             var graphQLRequest = new GraphQLRequest
             {
