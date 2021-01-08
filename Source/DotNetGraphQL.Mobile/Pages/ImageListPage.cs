@@ -40,7 +40,6 @@ namespace DotNetGraphQL.Mobile
 
             if (e.CurrentSelection.FirstOrDefault() is DogImagesModel dogImagesModel)
             {
-                //ToDo Navigate to Dog Images page
                 await OpenBrowser(dogImagesModel.WebsiteUrl);
             }
         }
