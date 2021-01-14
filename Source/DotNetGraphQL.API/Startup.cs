@@ -1,5 +1,4 @@
-using GraphQL;
-using GraphQL.Types;
+using GraphQL.Server;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,10 +15,11 @@ namespace DotNetGraphQL.API
         {
             services.Configure<KestrelServerOptions>(options => options.AllowSynchronousIO = true);
 
-            services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
-            services.AddSingleton<IDocumentWriter, GraphQL.NewtonsoftJson.DocumentWriter>();
-
-            services.AddSingleton<ISchema, ImagesSchema>();
+            services.AddSingleton<ImagesSchema>();
+            
+            services.AddGraphQL(options => options.EnableMetrics = false)
+	            .AddErrorInfoProvider(options => options.ExposeExceptionStackTrace = true)
+	            .AddNewtonsoftJson();
 
             services.AddCors(options =>
                                 options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
@@ -36,10 +36,10 @@ namespace DotNetGraphQL.API
 
             app.UseCors("AllowAll");
 
-            app.UseMiddleware<GraphQLMiddleware>(new GraphQLSettings(true, ctx => new GraphQLUserContext(ctx.User)));
-
             app.UseDefaultFiles();
             app.UseStaticFiles();
+
+            app.UseGraphQL<ImagesSchema>("/");
         }
     }
 }
