@@ -15,6 +15,38 @@ This app was featured at [GraphQL Summit 2019](https://codetraveler.io/GraphQLSu
 <a href="https://www.buymeacoffee.com/bminnick" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
 
+## Video Recordings
+
+### Consuming GraphQL in C#
+
+This session on GraphQL + C# was delivered at [GraphQL Summit 2019](https://codetraveler.io/GraphQLSummit-DotNet).  It demonstrates how to create a GraphQL Backend in C# and connect it to a client-side mobile app written in C# using Xamarin.
+
+[![Consuming GraphQL in C#](https://user-images.githubusercontent.com/13558917/68418928-17682700-014e-11ea-9aa6-749254cb50fe.png)](https://youtu.be/t1cQsenAmNo?t=18575)
+
+### Xamarin + GraphQL
+
+The session on Xamarin + GraphQL was delivered at [Xamarin Developer Summit 2019](https://www.codetraveler.io/xamdevsummit-graphql/). It demonstrates how to create a Xamarin app in C# and connect it to an existing GraphQL Backend.
+
+[![Xamarin + GraphQL Video](https://user-images.githubusercontent.com/13558917/61256668-6a8f1780-a722-11e9-97ad-8188ec6eab8f.png)](https://channel9.msdn.com/Events/Xamarin/Xamarin-Developer-Summit-2019/XamarinGraphQL?WT.mc_id=mobile-0000-bramin)
+
+### Learning GraphQL Series
+
+This special series teaches the basics of GraphQL, how to interact with an existing GraphQL endpoint, how to create your first GraphQL Server, and how to deploy your GraphQL Server to the cloud using Azure! 
+
+[![Learning GraphQL Series](https://sec.ch9.ms/ch9/167c/d62bfc00-95ae-42a1-ab23-af9b9602167c/IntrotoGraphQL_512.jpg)](https://channel9.msdn.com/Series/GraphQL?WT.mc_id=mobile-0000-bramin)
+
+### On .NET Show
+
+In this series, we cover how to create an end-to-end soolution, creating GraphQL Backend in C# and connecting to it from a C# client.
+
+- [Introduction to GraphQL](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=mobile-0000-bramin)
+- [Creating a GraphQL Backend in C#](https://channel9.msdn.com/Shows/On-NET/Creating-a-GraphQL-Backend?WT.mc_id=mobile-0000-bramin)
+- [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-GraphQL-in-C?WT.mc_id=mobile-0000-bramin)
+
+[![On .NET Show](https://user-images.githubusercontent.com/13558917/76797023-df22c600-6789-11ea-8595-99f90df499a9.png)](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=mobile-0000-bramin)
+
+## App Architecture 
+
 ### GraphQL Backend
 The GraphQL backend is created in C# using the [GraphQL NuGet Package](https://www.nuget.org/packages/GraphQL/).
 
@@ -100,33 +132,3 @@ Learn more about Xamarin + GraphQL
 - [GraphQL vs REST](https://philsturgeon.uk/api/2017/01/24/graphql-vs-rest-overview/)
 - [GraphQL vs OData](https://jeffhandley.com/2018-09-13/graphql-is-not-odata)
 - [Awesome GraphQL](https://github.com/chentsulin/awesome-graphql)
-
-## Video Recordings
-
-### Consuming GraphQL in C#
-
-This session on GraphQL + C# was delivered at [GraphQL Summit 2019](https://codetraveler.io/GraphQLSummit-DotNet).  It demonstrates how to create a GraphQL Backend in C# and connect it to a client-side mobile app written in C# using Xamarin.
-
-[![Consuming GraphQL in C#](https://user-images.githubusercontent.com/13558917/68418928-17682700-014e-11ea-9aa6-749254cb50fe.png)](https://youtu.be/t1cQsenAmNo?t=18575)
-
-### Xamarin + GraphQL
-
-The session on Xamarin + GraphQL was delivered at [Xamarin Developer Summit 2019](https://www.codetraveler.io/xamdevsummit-graphql/). It demonstrates how to create a Xamarin app in C# and connect it to an existing GraphQL Backend.
-
-[![Xamarin + GraphQL Video](https://user-images.githubusercontent.com/13558917/61256668-6a8f1780-a722-11e9-97ad-8188ec6eab8f.png)](https://channel9.msdn.com/Events/Xamarin/Xamarin-Developer-Summit-2019/XamarinGraphQL?WT.mc_id=mobile-0000-bramin)
-
-### Learning GraphQL Series
-
-This special series teaches the basics of GraphQL, how to interact with an existing GraphQL endpoint, how to create your first GraphQL Server, and how to deploy your GraphQL Server to the cloud using Azure! 
-
-[![Learning GraphQL Series](https://sec.ch9.ms/ch9/167c/d62bfc00-95ae-42a1-ab23-af9b9602167c/IntrotoGraphQL_512.jpg)](https://channel9.msdn.com/Series/GraphQL?WT.mc_id=mobile-0000-bramin)
-
-### On .NET Show
-
-In this series, we cover how to create an end-to-end soolution, creating GraphQL Backend in C# and connecting to it from a C# client.
-
-- [Introduction to GraphQL](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=mobile-0000-bramin)
-- [Creating a GraphQL Backend in C#](https://channel9.msdn.com/Shows/On-NET/Creating-a-GraphQL-Backend?WT.mc_id=mobile-0000-bramin)
-- [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-GraphQL-in-C?WT.mc_id=mobile-0000-bramin)
-
-[![On .NET Show](https://user-images.githubusercontent.com/13558917/76797023-df22c600-6789-11ea-8595-99f90df499a9.png)](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=mobile-0000-bramin)
