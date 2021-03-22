@@ -3,6 +3,7 @@ using DotNetGraphQL.Common;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.CommunityToolkit.Markup;
+using System;
 
 namespace DotNetGraphQL.Mobile
 {
@@ -38,7 +39,8 @@ namespace DotNetGraphQL.Mobile
             var collectionView = (CollectionView)sender;
             collectionView.SelectedItem = null;
 
-            if (e.CurrentSelection.FirstOrDefault() is DogImagesModel dogImagesModel)
+            if (e.CurrentSelection.FirstOrDefault() is DogImagesModel dogImagesModel
+                    && Uri.TryCreate(dogImagesModel.WebsiteUrl, UriKind.Absolute, out _))
             {
                 await OpenBrowser(dogImagesModel.WebsiteUrl);
             }

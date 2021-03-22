@@ -14,9 +14,6 @@
         <AssemblyName>DotNetGraphQL.Mobile.iOS</AssemblyName>
         <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
         <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-        <LangVersion>latest</LangVersion>
-        <Nullable>Enable</Nullable>
-        <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
         <DebugSymbols>true</DebugSymbols>
@@ -125,13 +122,13 @@
         <Reference Include="System.Numerics.Vectors" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
-        <PackageReference Include="Xamarin.Essentials" Version="1.6.1-preview1" />
-        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.0.2" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.1.0" />
         <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
         <PackageReference Include="modernhttpclient-updated" Version="3.4.3" />
-        <PackageReference Include="GraphQL.Client" Version="3.2.1" />
-        <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="3.2.1" />
+        <PackageReference Include="GraphQL.Client" Version="3.2.2" />
+        <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="3.2.2" />
         <PackageReference Include="Polly" Version="7.2.1" />
         <PackageReference Include="Xamarin.Forms.Nuke" Version="8.4.3" />
     </ItemGroup>
