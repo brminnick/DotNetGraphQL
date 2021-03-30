@@ -1,0 +1,36 @@
+name: Solution
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches: 
+      - "*"
+
+jobs:
+
+    Build:
+      runs-on: macos-latest
+
+      steps:
+      - uses: actions/checkout@v1
+        
+      - name: Setup .NET v5.0
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.x'
+          
+      - name: Setup .NET Core v3.1
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+        
+      - name: Restore NuGet 
+        run: nuget restore ./Source\
+          
+      - name: Build Android
+        run: mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./Source/DotNetGraphQL.Mobile.Android
+
+      - name: Build API
+        run: dotnet build ./Source/DotNetGraphQL.API -c Release
