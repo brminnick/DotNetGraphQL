@@ -28,12 +28,7 @@ jobs:
         
       - name: Restore NuGet 
         run: |
-          nuget restore ./Source
-        
-      - name: Inject API Keys
-        run: |
-          chmod -R 777 ./GitTrends.Android/appcenter-pre-build.sh
-          ./GitTrends.Android/appcenter-pre-build.sh
+          nuget restore ./Source\
           
       - name: Build Solution
         run: |                    
