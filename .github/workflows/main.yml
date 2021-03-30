@@ -1,0 +1,40 @@
+name: Xamarin
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches: 
+      - "*"
+
+jobs:
+
+    Build:
+      runs-on: macos-latest
+
+      steps:
+      - uses: actions/checkout@v1
+        
+      - name: Setup .NET v5.0
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.x'
+          
+      - name: Setup .NET Core v3.1
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+        
+      - name: Restore NuGet 
+        run: |
+          nuget restore
+        
+      - name: Inject API Keys
+        run: |
+          chmod -R 777 ./GitTrends.Android/appcenter-pre-build.sh
+          ./GitTrends.Android/appcenter-pre-build.sh
+          
+      - name: Build Solution
+        run: |                    
+          mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./Source
