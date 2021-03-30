@@ -27,9 +27,10 @@ jobs:
           dotnet-version: '3.1.x'
         
       - name: Restore NuGet 
-        run: |
-          nuget restore ./Source\
+        run: nuget restore ./Source\
           
-      - name: Build Solution
-        run: |                    
-          mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./Source
+      - name: Build Android
+        run: mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./Source/DotNetGraphQL.Mobile.Android
+
+      - name: Build API
+        run: dotnet build ./Source/DotNetGraphQL.API -c Release
