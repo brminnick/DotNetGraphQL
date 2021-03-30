@@ -5,9 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="GraphQL" Version="4.0.2" />
-        <PackageReference Include="GraphQL.NewtonsoftJson" Version="4.0.2" />
-        <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="5.0.0" />
+        <PackageReference Include="GraphQL" Version="4.2.0" />
+        <PackageReference Include="GraphQL.NewtonsoftJson" Version="4.2.0" />
+        <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="5.0.1" />
         <PackageReference Include="GraphQL.Server.Transports.AspNetCore.NewtonsoftJson" Version="5.0.1" />
     </ItemGroup>
     <ItemGroup>
