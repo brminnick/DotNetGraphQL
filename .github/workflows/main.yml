@@ -28,7 +28,7 @@ jobs:
         
       - name: Restore NuGet 
         run: |
-          nuget restore
+          nuget restore ./Source
         
       - name: Inject API Keys
         run: |
