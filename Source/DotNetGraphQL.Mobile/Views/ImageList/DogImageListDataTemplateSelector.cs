@@ -3,7 +3,6 @@ using ImageCircle.Forms.Plugin.Abstractions;
 using Xamarin.Forms;
 using Xamarin.CommunityToolkit.Markup;
 using static Xamarin.CommunityToolkit.Markup.GridRowsColumns;
-using static DotNetGraphQL.Mobile.GridLengths;
 
 namespace DotNetGraphQL.Mobile
 {
@@ -31,13 +30,13 @@ namespace DotNetGraphQL.Mobile
             static Grid CreateContentFrame(DogImagesModel dogImagesModel) => new()
             {
                 RowDefinitions = Rows.Define(
-                    (ContentFrameRow.TopPadding, AbsoluteGridLength(_padding)),
-                    (ContentFrameRow.Content, StarGridLength(1))),
+                    (ContentFrameRow.TopPadding, _padding),
+                    (ContentFrameRow.Content, Star)),
 
                 ColumnDefinitions = Columns.Define(
-                    (ContentFrameColumn.LeftPadding, AbsoluteGridLength(_padding / 2)),
-                    (ContentFrameColumn.Content, StarGridLength(1)),
-                    (ContentFrameColumn.RightPadding, AbsoluteGridLength(_padding / 2))),
+                    (ContentFrameColumn.LeftPadding, _padding / 2),
+                    (ContentFrameColumn.Content, Star),
+                    (ContentFrameColumn.RightPadding, _padding / 2)),
 
                 Children =
                 {
@@ -45,28 +44,25 @@ namespace DotNetGraphQL.Mobile
                 }
             };
 
-            static Grid CreateImageLayout(DogImagesModel dogImagesModel) => new()
+            static Grid CreateImageLayout(DogImagesModel dogImagesModel) => new Grid
             {
                 BackgroundColor = Color.Transparent,
 
                 RowSpacing = 2,
                 ColumnSpacing = 3,
 
-                HorizontalOptions = LayoutOptions.Start,
-                VerticalOptions = LayoutOptions.StartAndExpand,
-
                 RowDefinitions = Rows.Define(
-                    (ImageLayoutRow.TopPadding, AbsoluteGridLength(1)),
-                    (ImageLayoutRow.Name, AbsoluteGridLength(_titleFontSize + _padding)),
-                    (ImageLayoutRow.Breed, AbsoluteGridLength(_fontSize + _padding)),
-                    (ImageLayoutRow.Coat, AbsoluteGridLength(_fontSize + _padding)),
-                    (ImageLayoutRow.Birthday, AbsoluteGridLength(_fontSize)),
-                    (ImageLayoutRow.BottomPadding, AbsoluteGridLength(_padding))),
+                    (ImageLayoutRow.TopPadding, 1),
+                    (ImageLayoutRow.Name, _titleFontSize + _padding),
+                    (ImageLayoutRow.Breed, _fontSize + _padding),
+                    (ImageLayoutRow.Coat, _fontSize + _padding),
+                    (ImageLayoutRow.Birthday, _fontSize + _padding),
+                    (ImageLayoutRow.BottomPadding, _padding)),
 
                 ColumnDefinitions = Columns.Define(
-                    (ImageLayoutColumn.Avatar, AbsoluteGridLength(_circleImageHeight)),
-                    (ImageLayoutColumn.MiddlePadding, AbsoluteGridLength(2)),
-                    (ImageLayoutColumn.Text, StarGridLength(1))),
+                    (ImageLayoutColumn.Avatar, _circleImageHeight),
+                    (ImageLayoutColumn.MiddlePadding, 2),
+                    (ImageLayoutColumn.Text, Star)),
 
                 Children =
                 {
@@ -76,7 +72,7 @@ namespace DotNetGraphQL.Mobile
                     new DarkBlueLabel(_fontSize, $"🎨 {dogImagesModel.CoatColor}").Row(ImageLayoutRow.Coat).Column(ImageLayoutColumn.Text),
                     new DarkBlueLabel(_fontSize, $"🎂 {dogImagesModel.BirthDate?.ToString("MMMM dd yyyy") ?? "Unknown"}").Row(ImageLayoutRow.Birthday).Column(ImageLayoutColumn.Text),
                 }
-            };
+            }.Start().TopExpand();
 
             class DogNameLabel : DarkBlueLabel
             {
@@ -129,11 +125,5 @@ namespace DotNetGraphQL.Mobile
                 }
             }
         }
-    }
-
-    static class GridLengths
-    {
-        public static GridLength AbsoluteGridLength(double value) => new(value, GridUnitType.Absolute);
-        public static GridLength StarGridLength(double value) => new(value, GridUnitType.Star);
     }
 }
