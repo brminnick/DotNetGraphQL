@@ -16,15 +16,14 @@ namespace DotNetGraphQL.API
             services.Configure<KestrelServerOptions>(options => options.AllowSynchronousIO = true);
 
             services.AddSingleton<ImagesSchema>();
-            
-            services.AddGraphQL(options => options.EnableMetrics = false)
-	            .AddErrorInfoProvider(options => options.ExposeExceptionStackTrace = true)
-	            .AddNewtonsoftJson();
 
-            services.AddCors(options =>
-                                options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
-                                .AllowAnyMethod()
-                                .AllowAnyHeader()));
+            services.AddGraphQL(options => options.EnableMetrics = false)
+                    .AddErrorInfoProvider(options => options.ExposeExceptionStackTrace = true)
+                    .AddNewtonsoftJson();
+
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                 .AllowAnyMethod()
+                                                 .AllowAnyHeader()));
             services.AddLogging(builder => builder.AddConsole());
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
