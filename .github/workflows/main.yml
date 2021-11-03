@@ -31,7 +31,7 @@ jobs:
         run: dotnet restore ./Source
           
       - name: Build Android
-        run: mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./Source/DotNetGraphQL.Mobile.Android /p:Configuration=Release /restore
+        run: mono /Applications/Visual\ studio.app/Contents/Resources/lib/monodevelop/bin/MSBuild/Current/bin/MSBuild.dll ./Source/DotNetGraphQL.Mobile.Android /restore
 
       - name: Build API
         run: dotnet build ./Source/DotNetGraphQL.API -c Release
