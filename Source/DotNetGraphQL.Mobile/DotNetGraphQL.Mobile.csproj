@@ -4,7 +4,7 @@
         <TargetFramework>netstandard2.1</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
         <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
         <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.2" />
         <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />

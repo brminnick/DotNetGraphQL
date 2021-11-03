@@ -122,7 +122,7 @@
         <Reference Include="System.Numerics.Vectors" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
         <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
         <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.2" />
         <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
@@ -130,7 +130,7 @@
         <PackageReference Include="GraphQL.Client" Version="4.0.1" />
         <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="4.0.1" />
         <PackageReference Include="Polly" Version="7.2.2" />
-        <PackageReference Include="Xamarin.Forms.Nuke" Version="8.4.3" />
+        <PackageReference Include="Xamarin.Forms.Nuke" Version="10.3.1" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\DotNetGraphQL.Mobile\DotNetGraphQL.Mobile.csproj">
