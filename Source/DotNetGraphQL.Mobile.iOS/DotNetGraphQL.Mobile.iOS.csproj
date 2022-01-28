@@ -122,7 +122,7 @@
         <Reference Include="System.Numerics.Vectors" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
         <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
         <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.4" />
         <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
@@ -136,6 +136,7 @@
         <ProjectReference Include="..\DotNetGraphQL.Mobile\DotNetGraphQL.Mobile.csproj">
             <Project>{62CF3CB0-9E8D-490C-880B-4D98E873C59B}</Project>
             <Name>DotNetGraphQL.Mobile</Name>
+            <ReferenceSourceTarget></ReferenceSourceTarget>
         </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
