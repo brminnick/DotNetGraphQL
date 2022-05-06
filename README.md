@@ -4,9 +4,9 @@ If you're new to GraphQL, check out these videos featured in the [Learn More](#l
 - [Learning GraphQL Series](#learning-graphql-series)
 - [Xamarin + GraphQL](#xamarin--graphql)
 - On .NET Show, Channel 9
-  - [Introduction to GraphQL](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=mobile-0000-bramin)
-  - [Creating a GraphQL Backend in C#](https://channel9.msdn.com/Shows/On-NET/Creating-a-GraphQL-Backend?WT.mc_id=mobile-0000-bramin)
-  - [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-a-GraphQL-in-C?WT.mc_id=mobile-0000-bramin)
+  - [Introduction to GraphQL](https://docs.microsoft.com/shows/on-net/introduction-to-graphql?WT.mc_id=dotnetgraphql-codetraveler-bramin)
+  - [Creating a GraphQL Backend in C#](https://docs.microsoft.com/shows/on-net/creating-a-graphql-backend?WT.mc_id=dotnetgraphql-codetraveler-bramin)
+  - [Consuming GraphQL in C#](https://docs.microsoft.com/shows/on-net/consuming-graphql-in-c?WT.mc_id=dotnetgraphql-codetraveler-bramin)
 
 To run this sample, follow the [Getting Started Instructions, below](#getting-started).
 
@@ -30,17 +30,17 @@ The session on Xamarin + GraphQL was delivered at [Xamarin Developer Summit 2019
 
 This special series teaches the basics of GraphQL, how to interact with an existing GraphQL endpoint, how to create your first GraphQL Server, and how to deploy your GraphQL Server to the cloud using Azure! 
 
-[![Learning GraphQL Series](https://sec.ch9.ms/ch9/167c/d62bfc00-95ae-42a1-ab23-af9b9602167c/IntrotoGraphQL_512.jpg)](https://channel9.msdn.com/Series/GraphQL?WT.mc_id=mobile-0000-bramin)
+[![Learning GraphQL Series](https://docs.microsoft.com/shows/graphql/?WT.mc_id=dotnetgraphql-codetraveler-bramin)
 
 ### On .NET Show
 
 In this series, we cover how to create an end-to-end soolution, creating GraphQL Backend in C# and connecting to it from a C# client.
 
-- [Introduction to GraphQL](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=mobile-0000-bramin)
-- [Creating a GraphQL Backend in C#](https://channel9.msdn.com/Shows/On-NET/Creating-a-GraphQL-Backend?WT.mc_id=mobile-0000-bramin)
-- [Consuming GraphQL in C#](https://channel9.msdn.com/Shows/On-NET/Consuming-GraphQL-in-C?WT.mc_id=mobile-0000-bramin)
+- [Introduction to GraphQL](https://docs.microsoft.com/shows/on-net/introduction-to-graphql?WT.mc_id=dotnetgraphql-codetraveler-bramin)
+- [Creating a GraphQL Backend in C#](https://docs.microsoft.com/shows/on-net/creating-a-graphql-backend?WT.mc_id=dotnetgraphql-codetraveler-bramin)
+- [Consuming GraphQL in C#](https://docs.microsoft.com/shows/on-net/consuming-graphql-in-c?WT.mc_id=dotnetgraphql-codetraveler-bramin)
 
-[![On .NET Show](https://user-images.githubusercontent.com/13558917/76797023-df22c600-6789-11ea-8595-99f90df499a9.png)](https://channel9.msdn.com/Shows/On-NET/Introduction-to-GraphQL?WT.mc_id=mobile-0000-bramin)
+[![On .NET Show](https://user-images.githubusercontent.com/13558917/76797023-df22c600-6789-11ea-8595-99f90df499a9.png)](https://docs.microsoft.com/shows/on-net/?WT.mc_id=mobile-0000-bramin)
 
 ## App Architecture 
 
