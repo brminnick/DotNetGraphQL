@@ -1,3 +1,5 @@
+[![Build Solution](https://github.com/brminnick/DotNetGraphQL/actions/workflows/main.yml/badge.svg)](https://github.com/brminnick/DotNetGraphQL/actions/workflows/main.yml)
+
 # GraphQL in .NET
 
 If you're new to GraphQL, check out these videos featured in the [Learn More](#learn-more) section, below
