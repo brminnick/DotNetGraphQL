@@ -6,7 +6,7 @@
     <ItemGroup>
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478+927-sha.9f26f70d6-azdo.6239473" />
         <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
-        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.4" />
+        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.5" />
         <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
         <PackageReference Include="modernhttpclient-updated" Version="3.4.3" />
         <PackageReference Include="GraphQL.Client" Version="4.0.2" />
