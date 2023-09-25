@@ -32,7 +32,7 @@ The session on Xamarin + GraphQL was delivered at [Xamarin Developer Summit 2019
 
 This special series teaches the basics of GraphQL, how to interact with an existing GraphQL endpoint, how to create your first GraphQL Server, and how to deploy your GraphQL Server to the cloud using Azure! 
 
-[![Learning GraphQL Series](https://sec.ch9.ms/ch9/167c/d62bfc00-95ae-42a1-ab23-af9b9602167c/IntrotoGraphQL_512.jpg)](https://learn.microsoft.com/shows/graphql?WT.mc_id=mobile-0000-bramin)
+[![Learning GraphQL Series](https://learn.microsoft.com/en-us/shows/graphql/media/1854de91-affc-4a02-8a0c-a0f112e18b62.png)](https://learn.microsoft.com/shows/graphql?WT.mc_id=mobile-0000-bramin)
 
 ### On .NET Show
 
