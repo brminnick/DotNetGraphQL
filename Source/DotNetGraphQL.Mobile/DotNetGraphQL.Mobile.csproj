@@ -12,7 +12,7 @@
         <PackageReference Include="modernhttpclient-updated" Version="3.4.3" />
         <PackageReference Include="GraphQL.Client" Version="6.0.0" />
         <PackageReference Include="Polly" Version="7.2.4" />
-        <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="6.0.0" />
+        <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="6.1.0" />
         <PackageReference Include="Xamarin.CommunityToolkit.Markup" Version="2.0.6" />
     </ItemGroup>
     <ItemGroup>
